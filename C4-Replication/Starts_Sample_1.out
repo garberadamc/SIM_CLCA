@@ -1,0 +1,1416 @@
+Mplus VERSION 8.6 (Mac)
+MUTHEN & MUTHEN
+09/27/2024   1:24 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  Starts - Sample 1
+  DATA:
+  FILE = "/Users/agarber/github/SIM_CLCA/C4-Replication/Starts_Sample_1.dat";
+
+  VARIABLE:
+  NAMES = primary change interupt initiat engage approach response expect new same
+       relative objects sequence trans avoid control touch sample;
+   MISSING=.;
+   categorical = primary-touch;
+      usevar = primary-touch;
+      classes = c(5);
+  ANALYSIS:
+  estimator = mlr;
+      type = mixture;
+      starts = 500 200;
+      !STSEED = ; !!! USE SEED TO REPLICATE THESIS RESULTS !!!
+
+  OUTPUT:
+  svalues;
+  PLOT:
+  type = plot3;
+            series = primary-touch(*);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+Starts - Sample 1
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        3000
+
+Number of dependent variables                                   17
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+Number of categorical latent variables                           1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   PRIMARY     CHANGE      INTERUPT    INITIAT     ENGAGE      APPROACH
+   RESPONSE    EXPECT      NEW         SAME        RELATIVE    OBJECTS
+   SEQUENCE    TRANS       AVOID       CONTROL     TOUCH
+
+Categorical latent variables
+   C
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-06
+    Relative loglikelihood change                        0.100D-06
+    Derivative                                           0.100D-05
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Optimization algorithm                                         EMA
+Random Starts Specifications
+  Number of initial stage random starts                        500
+  Number of final stage optimizations                          200
+  Number of initial stage iterations                            10
+  Initial stage convergence criterion                    0.100D+01
+  Random starts scale                                    0.500D+01
+  Random seed for generating random starts                       0
+Link                                                         LOGIT
+
+Input data file(s)
+  /Users/agarber/github/SIM_CLCA/C4-Replication/Starts_Sample_1.dat
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+     Number of y missing data patterns           0
+     Number of u missing data patterns           1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    PRIMARY
+      Category 1    0.545         1634.000
+      Category 2    0.455         1366.000
+    CHANGE
+      Category 1    0.477         1430.000
+      Category 2    0.523         1570.000
+    INTERUPT
+      Category 1    0.484         1451.000
+      Category 2    0.516         1549.000
+    INITIAT
+      Category 1    0.440         1321.000
+      Category 2    0.560         1679.000
+    ENGAGE
+      Category 1    0.561         1683.000
+      Category 2    0.439         1317.000
+    APPROACH
+      Category 1    0.483         1448.000
+      Category 2    0.517         1552.000
+    RESPONSE
+      Category 1    0.477         1430.000
+      Category 2    0.523         1570.000
+    EXPECT
+      Category 1    0.471         1412.000
+      Category 2    0.529         1588.000
+    NEW
+      Category 1    0.556         1667.000
+      Category 2    0.444         1333.000
+    SAME
+      Category 1    0.653         1958.000
+      Category 2    0.347         1042.000
+    RELATIVE
+      Category 1    0.586         1759.000
+      Category 2    0.414         1241.000
+    OBJECTS
+      Category 1    0.509         1528.000
+      Category 2    0.491         1472.000
+    SEQUENCE
+      Category 1    0.551         1653.000
+      Category 2    0.449         1347.000
+    TRANS
+      Category 1    0.525         1576.000
+      Category 2    0.475         1424.000
+    AVOID
+      Category 1    0.590         1769.000
+      Category 2    0.410         1231.000
+    CONTROL
+      Category 1    0.671         2014.000
+      Category 2    0.329          986.000
+    TOUCH
+      Category 1    0.667         2002.000
+      Category 2    0.333          998.000
+
+
+RANDOM STARTS RESULTS RANKED FROM THE BEST TO THE WORST LOGLIKELIHOOD VALUES
+
+Final stage loglikelihood values at local maxima, seeds, and initial stage start numbers:
+
+          -26311.981  887676           22
+          -26311.981  17359            227
+          -26311.981  399380           436
+          -26311.981  464179           106
+          -26311.981  392407           221
+          -26311.981  937588           293
+          -26311.981  392418           28
+          -26311.981  891531           206
+          -26311.981  120506           45
+          -26311.981  441191           361
+          -26311.981  281462           285
+          -26311.981  603842           61
+          -26311.981  576726           280
+          -26311.981  462228           298
+          -26311.981  478421           311
+          -26311.981  206099           363
+          -26311.981  185071           370
+          -26311.981  608460           244
+          -26311.981  957392           79
+          -26311.981  930323           267
+          -26311.981  804561           59
+          -26311.981  863691           481
+          -26311.981  978781           497
+          -26311.981  468036           131
+          -26311.981  247224           94
+          -26311.981  34346            330
+          -26311.981  483369           270
+          -26311.981  903420           5
+          -26311.981  608849           224
+          -26311.981  662718           460
+          -26311.981  39136            226
+          -26311.981  930872           277
+          -26311.981  535063           329
+          -26311.981  175199           247
+          -26311.981  438144           271
+          -26311.981  68985            17
+          -26311.981  373505           88
+          -26311.981  475420           71
+          -26311.981  801717           364
+          -26311.981  210870           383
+          -26311.981  281558           184
+          -26311.981  97158            205
+          -26311.981  724519           333
+          -26311.981  57226            208
+          -26311.981  849670           347
+          -26311.981  264935           281
+          -26311.981  263268           165
+          -26311.981  153942           31
+          -26311.981  926797           406
+          -26311.981  317640           437
+          -26311.981  416250           390
+          -26311.981  584397           428
+          -26311.981  173440           328
+          -26311.981  863094           147
+          -26311.981  579995           183
+          -26311.981  860102           495
+          -26311.981  691234           250
+          -26311.981  89970            223
+          -26311.981  399671           13
+          -26311.981  783165           170
+          -26311.981  21345            199
+          -26311.981  789985           67
+          -26311.981  970689           266
+          -26311.981  835767           210
+          -26311.981  73576            213
+          -26311.981  821011           161
+          -26311.981  55115            408
+          -26311.981  860772           174
+          -26311.981  220454           288
+          -26311.981  535804           111
+          -26311.981  443917           60
+          -26311.981  751153           110
+          -26311.981  762461           425
+          -26311.981  862607           468
+          -26311.981  76451            211
+          -26311.981  652266           490
+          -26311.981  321390           133
+          -26311.981  192071           142
+          -26311.981  195873           6
+          -26311.981  411615           171
+          -26311.981  853195           431
+          -26311.981  168762           200
+          -26311.981  903369           134
+          -26311.981  606576           151
+          -26311.981  926283           269
+          -26311.981  335485           496
+          -26311.981  602797           336
+          -26311.981  66276            217
+          -26311.981  654136           167
+          -26311.981  568859           49
+          -26311.981  207896           25
+          -26311.981  226322           478
+          -26311.981  152496           123
+          -26311.981  569131           26
+          -26311.981  70118            104
+          -26311.981  484687           306
+          -26311.981  898745           466
+          -26311.981  105435           265
+          -26311.981  298275           418
+          -26311.981  76974            16
+          -26311.981  568405           233
+          -26311.981  967902           52
+          -26311.981  991329           182
+          -26311.981  372176           23
+          -26311.981  131856           90
+          -26311.981  416463           467
+          -26311.981  618760           489
+          -26311.981  971693           470
+          -26311.981  216565           474
+          -26311.981  164305           128
+          -26311.981  978061           488
+          -26311.981  437181           135
+          -26311.981  754100           56
+          -26311.981  582296           452
+          -26311.981  644297           340
+          -26311.981  195763           358
+          -26311.981  673496           218
+          -26311.981  319575           499
+          -26311.981  514326           325
+          -26311.981  688839           273
+          -26311.981  260601           36
+          -26311.981  760878           249
+          -26311.981  1548             384
+          -26311.981  481835           57
+          -26311.981  315029           471
+          -26311.981  761633           50
+          -26311.981  722748           346
+          -26311.981  939021           8
+          -26311.981  43523            297
+          -26311.981  51375            148
+          -26311.981  836066           372
+          -26311.981  534483           290
+          -26311.981  573096           20
+          -26311.981  642909           251
+          -26311.981  692169           308
+          -26311.981  137305           379
+          -26311.981  960438           116
+          -26311.981  140442           500
+          -26311.981  215353           164
+          -26311.981  507154           387
+          -26311.981  414284           158
+          -26311.981  40340            188
+          -26311.981  928287           197
+          -26311.981  717754           180
+          -26311.981  871722           355
+          -26311.981  193569           440
+          -26311.981  840078           203
+          -26311.981  782821           272
+          -26311.981  313407           132
+          -26311.981  830570           369
+          -26311.981  173191           422
+          -26311.981  354559           73
+          -26311.981  723775           97
+          -26311.981  696773           80
+          -26311.981  76337            76
+          -26311.981  618000           190
+          -26311.981  283492           435
+          -26311.981  636396           168
+          -26311.981  814975           129
+          -26311.981  667250           318
+          -26311.981  404510           442
+          -26311.981  467339           66
+          -26311.981  567165           319
+          -26311.981  752769           253
+          -26311.981  292884           103
+          -26311.981  195353           225
+          -26311.981  263221           447
+          -26311.981  798839           312
+          -26311.981  871851           257
+          -26311.981  804660           260
+          -26311.981  965994           396
+          -26311.981  488125           368
+          -26311.981  529496           343
+          -26311.981  359578           458
+          -26311.981  107446           12
+          -26311.981  915642           40
+          -26311.981  813779           92
+          -26311.981  945065           255
+          -26311.981  319144           176
+          -26311.981  404426           344
+          -26311.981  408713           450
+          -26311.981  829540           324
+          -26311.981  669634           335
+          -26311.981  728038           177
+          -26311.981  123985           248
+          -26311.981  726035           191
+          -26311.981  937225           394
+          -26311.981  972430           491
+          -26311.981  496881           192
+          -26311.981  508482           446
+          -26311.981  888905           444
+          -26311.981  848890           95
+          -26311.981  685657           69
+          -26311.981  82357            339
+          -26311.981  364676           27
+          -26311.981  246575           291
+          -26311.981  193847           354
+          -26311.981  499150           216
+          -26311.981  965639           463
+          -26311.981  462953           7
+
+
+
+THE BEST LOGLIKELIHOOD VALUE HAS BEEN REPLICATED.  RERUN WITH AT LEAST TWICE THE
+RANDOM STARTS TO CHECK THAT THE BEST LOGLIKELIHOOD IS STILL OBTAINED AND REPLICATED.
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       89
+
+Loglikelihood
+
+          H0 Value                      -26311.981
+          H0 Scaling Correction Factor      1.0032
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                   52801.962
+          Bayesian (BIC)                 53336.529
+          Sample-Size Adjusted BIC       53053.742
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit for the Binary and Ordered Categorical
+(Ordinal) Outcomes**
+
+          Pearson Chi-Square
+
+          Value                          23911.669
+          Degrees of Freedom                130795
+          P-Value                           1.0000
+
+          Likelihood Ratio Chi-Square
+
+          Value                           7263.724
+          Degrees of Freedom                130795
+          P-Value                           1.0000
+
+** Of the 131072 cells in the latent class indicator table, 187
+   were deleted in the calculation of chi-square due to extreme values.
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THE ESTIMATED MODEL
+
+    Latent
+   Classes
+
+       1        632.88120          0.21096
+       2        321.02427          0.10701
+       3       1066.86025          0.35562
+       4        193.52824          0.06451
+       5        785.70604          0.26190
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON ESTIMATED POSTERIOR PROBABILITIES
+
+    Latent
+   Classes
+
+       1        632.88120          0.21096
+       2        321.02427          0.10701
+       3       1066.86025          0.35562
+       4        193.52824          0.06451
+       5        785.70604          0.26190
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THEIR MOST LIKELY LATENT CLASS MEMBERSHIP
+
+Class Counts and Proportions
+
+    Latent
+   Classes
+
+       1              624          0.20800
+       2              319          0.10633
+       3             1077          0.35900
+       4              193          0.06433
+       5              787          0.26233
+
+
+CLASSIFICATION QUALITY
+
+     Entropy                         0.947
+
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4        5
+
+    1   0.941    0.004    0.047    0.005    0.004
+    2   0.005    0.983    0.004    0.000    0.008
+    3   0.035    0.002    0.962    0.000    0.000
+    4   0.012    0.000    0.002    0.985    0.001
+    5   0.005    0.003    0.000    0.000    0.991
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4        5
+
+    1   0.928    0.002    0.060    0.004    0.006
+    2   0.007    0.977    0.008    0.000    0.007
+    3   0.027    0.001    0.971    0.000    0.000
+    4   0.015    0.000    0.001    0.982    0.001
+    5   0.003    0.003    0.000    0.000    0.993
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4        5
+
+    1      5.023   -0.930    2.284   -0.519    0.000
+    2     -0.057    4.878    0.117   -8.914    0.000
+    3      4.437    1.238    8.006    0.083    0.000
+    4      2.436   -7.197   -0.151    6.601    0.000
+    5     -5.799   -5.710   -7.623   -8.119    0.000
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Latent Class 1
+
+ Thresholds
+    PRIMARY$1         -0.218      0.085     -2.572      0.010
+    CHANGE$1          -0.459      0.086     -5.319      0.000
+    INTERUPT$1        -0.640      0.088     -7.247      0.000
+    INITIAT$1         -0.468      0.087     -5.382      0.000
+    ENGAGE$1          -0.335      0.086     -3.917      0.000
+    APPROACH$1        -0.422      0.086     -4.904      0.000
+    RESPONSE$1        -0.585      0.088     -6.674      0.000
+    EXPECT$1          -0.604      0.088     -6.864      0.000
+    NEW$1              1.177      0.101     11.683      0.000
+    SAME$1             2.922      0.214     13.635      0.000
+    RELATIVE$1         1.868      0.127     14.675      0.000
+    OBJECTS$1         -1.978      0.164    -12.068      0.000
+    SEQUENCE$1        -1.404      0.126    -11.131      0.000
+    TRANS$1           -1.317      0.112    -11.760      0.000
+    AVOID$1            0.997      0.095     10.499      0.000
+    CONTROL$1          1.693      0.117     14.507      0.000
+    TOUCH$1            1.246      0.101     12.317      0.000
+
+Latent Class 2
+
+ Thresholds
+    PRIMARY$1          3.451      0.343     10.071      0.000
+    CHANGE$1           2.101      0.185     11.389      0.000
+    INTERUPT$1         2.332      0.205     11.395      0.000
+    INITIAT$1          4.671      0.732      6.378      0.000
+    ENGAGE$1           2.613      0.234     11.163      0.000
+    APPROACH$1         3.007      0.291     10.329      0.000
+    RESPONSE$1         3.019      0.287     10.527      0.000
+    EXPECT$1           2.476      0.222     11.167      0.000
+    NEW$1              2.135      0.187     11.402      0.000
+    SAME$1             2.619      0.235     11.169      0.000
+    RELATIVE$1         2.467      0.219     11.283      0.000
+    OBJECTS$1          3.490      0.353      9.879      0.000
+    SEQUENCE$1         2.162      0.192     11.241      0.000
+    TRANS$1            1.763      0.165     10.711      0.000
+    AVOID$1            1.629      0.155     10.516      0.000
+    CONTROL$1          2.778      0.258     10.767      0.000
+    TOUCH$1            2.982      0.276     10.791      0.000
+
+Latent Class 3
+
+ Thresholds
+    PRIMARY$1         -1.158      0.075    -15.418      0.000
+    CHANGE$1          -1.056      0.073    -14.493      0.000
+    INTERUPT$1        -1.471      0.083    -17.782      0.000
+    INITIAT$1         -1.885      0.096    -19.646      0.000
+    ENGAGE$1          -0.859      0.070    -12.297      0.000
+    APPROACH$1        -1.297      0.078    -16.725      0.000
+    RESPONSE$1        -1.606      0.087    -18.465      0.000
+    EXPECT$1          -1.849      0.094    -19.587      0.000
+    NEW$1              1.214      0.075     16.176      0.000
+    SAME$1             1.258      0.076     16.615      0.000
+    RELATIVE$1         1.003      0.071     14.122      0.000
+    OBJECTS$1          2.024      0.111     18.170      0.000
+    SEQUENCE$1         2.494      0.135     18.446      0.000
+    TRANS$1            1.915      0.107     17.869      0.000
+    AVOID$1            1.222      0.075     16.228      0.000
+    CONTROL$1          3.675      0.217     16.956      0.000
+    TOUCH$1            2.021      0.100     20.171      0.000
+
+Latent Class 4
+
+ Thresholds
+    PRIMARY$1         -2.459      0.284     -8.655      0.000
+    CHANGE$1          -2.071      0.234     -8.834      0.000
+    INTERUPT$1        -2.295      0.254     -9.027      0.000
+    INITIAT$1         -2.282      0.254     -8.983      0.000
+    ENGAGE$1          -1.872      0.219     -8.553      0.000
+    APPROACH$1        -2.253      0.251     -8.973      0.000
+    RESPONSE$1        -2.277      0.254     -8.981      0.000
+    EXPECT$1          -2.297      0.259     -8.858      0.000
+    NEW$1             -2.866      0.329     -8.719      0.000
+    SAME$1            -2.028      0.236     -8.587      0.000
+    RELATIVE$1        -2.093      0.246     -8.497      0.000
+    OBJECTS$1         -3.258      0.390     -8.362      0.000
+    SEQUENCE$1        -2.184      0.246     -8.886      0.000
+    TRANS$1           -2.903      0.326     -8.898      0.000
+    AVOID$1           -2.169      0.254     -8.544      0.000
+    CONTROL$1         -1.951      0.230     -8.479      0.000
+    TOUCH$1           -1.642      0.203     -8.076      0.000
+
+Latent Class 5
+
+ Thresholds
+    PRIMARY$1          3.922      0.268     14.616      0.000
+    CHANGE$1           1.187      0.085     13.975      0.000
+    INTERUPT$1         2.443      0.134     18.255      0.000
+    INITIAT$1          1.178      0.085     13.875      0.000
+    ENGAGE$1           4.469      0.344     12.976      0.000
+    APPROACH$1         1.513      0.094     16.175      0.000
+    RESPONSE$1         2.114      0.117     18.130      0.000
+    EXPECT$1           2.561      0.140     18.239      0.000
+    NEW$1             -2.437      0.136    -17.892      0.000
+    SAME$1            -1.042      0.082    -12.678      0.000
+    RELATIVE$1        -1.783      0.104    -17.133      0.000
+    OBJECTS$1         -1.142      0.084    -13.526      0.000
+    SEQUENCE$1        -0.850      0.079    -10.819      0.000
+    TRANS$1           -0.892      0.079    -11.267      0.000
+    AVOID$1           -1.112      0.084    -13.290      0.000
+    CONTROL$1         -1.788      0.104    -17.184      0.000
+    TOUCH$1           -0.872      0.079    -11.041      0.000
+
+Categorical Latent Variables
+
+ Means
+    C#1               -0.216      0.058     -3.741      0.000
+    C#2               -0.895      0.068    -13.221      0.000
+    C#3                0.306      0.049      6.281      0.000
+    C#4               -1.401      0.082    -17.180      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.252E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+RESULTS IN PROBABILITY SCALE
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Latent Class 1
+
+ PRIMARY
+    Category 1         0.446      0.021     21.326      0.000
+    Category 2         0.554      0.021     26.510      0.000
+ CHANGE
+    Category 1         0.387      0.020     18.903      0.000
+    Category 2         0.613      0.020     29.918      0.000
+ INTERUPT
+    Category 1         0.345      0.020     17.284      0.000
+    Category 2         0.655      0.020     32.790      0.000
+ INITIAT
+    Category 1         0.385      0.021     18.699      0.000
+    Category 2         0.615      0.021     29.861      0.000
+ ENGAGE
+    Category 1         0.417      0.021     20.051      0.000
+    Category 2         0.583      0.021     28.033      0.000
+ APPROACH
+    Category 1         0.396      0.021     19.259      0.000
+    Category 2         0.604      0.021     29.359      0.000
+ RESPONSE
+    Category 1         0.358      0.020     17.780      0.000
+    Category 2         0.642      0.020     31.901      0.000
+ EXPECT
+    Category 1         0.354      0.020     17.587      0.000
+    Category 2         0.646      0.020     32.164      0.000
+ NEW
+    Category 1         0.764      0.018     42.133      0.000
+    Category 2         0.236      0.018     12.984      0.000
+ SAME
+    Category 1         0.949      0.010     91.338      0.000
+    Category 2         0.051      0.010      4.918      0.000
+ RELATIVE
+    Category 1         0.866      0.015     58.723      0.000
+    Category 2         0.134      0.015      9.070      0.000
+ OBJECTS
+    Category 1         0.121      0.017      6.943      0.000
+    Category 2         0.879      0.017     50.209      0.000
+ SEQUENCE
+    Category 1         0.197      0.020      9.873      0.000
+    Category 2         0.803      0.020     40.209      0.000
+ TRANS
+    Category 1         0.211      0.019     11.317      0.000
+    Category 2         0.789      0.019     42.256      0.000
+ AVOID
+    Category 1         0.730      0.019     39.074      0.000
+    Category 2         0.270      0.019     14.422      0.000
+ CONTROL
+    Category 1         0.845      0.015     55.150      0.000
+    Category 2         0.155      0.015     10.144      0.000
+ TOUCH
+    Category 1         0.777      0.018     44.250      0.000
+    Category 2         0.223      0.018     12.728      0.000
+
+Latent Class 2
+
+ PRIMARY
+    Category 1         0.969      0.010     94.942      0.000
+    Category 2         0.031      0.010      3.011      0.003
+ CHANGE
+    Category 1         0.891      0.018     49.742      0.000
+    Category 2         0.109      0.018      6.082      0.000
+ INTERUPT
+    Category 1         0.911      0.017     55.200      0.000
+    Category 2         0.089      0.017      5.361      0.000
+ INITIAT
+    Category 1         0.991      0.007    147.145      0.000
+    Category 2         0.009      0.007      1.378      0.168
+ ENGAGE
+    Category 1         0.932      0.015     62.547      0.000
+    Category 2         0.068      0.015      4.585      0.000
+ APPROACH
+    Category 1         0.953      0.013     72.911      0.000
+    Category 2         0.047      0.013      3.605      0.000
+ RESPONSE
+    Category 1         0.953      0.013     74.852      0.000
+    Category 2         0.047      0.013      3.658      0.000
+ EXPECT
+    Category 1         0.922      0.016     58.153      0.000
+    Category 2         0.078      0.016      4.889      0.000
+ NEW
+    Category 1         0.894      0.018     50.498      0.000
+    Category 2         0.106      0.018      5.973      0.000
+ SAME
+    Category 1         0.932      0.015     62.795      0.000
+    Category 2         0.068      0.015      4.575      0.000
+ RELATIVE
+    Category 1         0.922      0.016     58.485      0.000
+    Category 2         0.078      0.016      4.961      0.000
+ OBJECTS
+    Category 1         0.970      0.010     95.642      0.000
+    Category 2         0.030      0.010      2.917      0.004
+ SEQUENCE
+    Category 1         0.897      0.018     50.382      0.000
+    Category 2         0.103      0.018      5.796      0.000
+ TRANS
+    Category 1         0.854      0.021     41.496      0.000
+    Category 2         0.146      0.021      7.116      0.000
+ AVOID
+    Category 1         0.836      0.021     39.372      0.000
+    Category 2         0.164      0.021      7.721      0.000
+ CONTROL
+    Category 1         0.941      0.014     66.215      0.000
+    Category 2         0.059      0.014      4.117      0.000
+ TOUCH
+    Category 1         0.952      0.013     75.003      0.000
+    Category 2         0.048      0.013      3.802      0.000
+
+Latent Class 3
+
+ PRIMARY
+    Category 1         0.239      0.014     17.495      0.000
+    Category 2         0.761      0.014     55.699      0.000
+ CHANGE
+    Category 1         0.258      0.014     18.490      0.000
+    Category 2         0.742      0.014     53.177      0.000
+ INTERUPT
+    Category 1         0.187      0.013     14.871      0.000
+    Category 2         0.813      0.013     64.712      0.000
+ INITIAT
+    Category 1         0.132      0.011     12.005      0.000
+    Category 2         0.868      0.011     79.067      0.000
+ ENGAGE
+    Category 1         0.297      0.015     20.372      0.000
+    Category 2         0.703      0.015     48.106      0.000
+ APPROACH
+    Category 1         0.215      0.013     16.423      0.000
+    Category 2         0.785      0.013     60.068      0.000
+ RESPONSE
+    Category 1         0.167      0.012     13.810      0.000
+    Category 2         0.833      0.012     68.782      0.000
+ EXPECT
+    Category 1         0.136      0.011     12.262      0.000
+    Category 2         0.864      0.011     77.892      0.000
+ NEW
+    Category 1         0.771      0.013     58.188      0.000
+    Category 2         0.229      0.013     17.285      0.000
+ SAME
+    Category 1         0.779      0.013     59.675      0.000
+    Category 2         0.221      0.013     16.959      0.000
+ RELATIVE
+    Category 1         0.732      0.014     52.469      0.000
+    Category 2         0.268      0.014     19.245      0.000
+ OBJECTS
+    Category 1         0.883      0.011     76.929      0.000
+    Category 2         0.117      0.011     10.162      0.000
+ SEQUENCE
+    Category 1         0.924      0.010     96.937      0.000
+    Category 2         0.076      0.010      8.009      0.000
+ TRANS
+    Category 1         0.872      0.012     72.656      0.000
+    Category 2         0.128      0.012     10.708      0.000
+ AVOID
+    Category 1         0.772      0.013     58.351      0.000
+    Category 2         0.228      0.013     17.188      0.000
+ CONTROL
+    Category 1         0.975      0.005    186.662      0.000
+    Category 2         0.025      0.005      4.730      0.000
+ TOUCH
+    Category 1         0.883      0.010     85.283      0.000
+    Category 2         0.117      0.010     11.305      0.000
+
+Latent Class 4
+
+ PRIMARY
+    Category 1         0.079      0.021      3.820      0.000
+    Category 2         0.921      0.021     44.677      0.000
+ CHANGE
+    Category 1         0.112      0.023      4.804      0.000
+    Category 2         0.888      0.023     38.101      0.000
+ INTERUPT
+    Category 1         0.092      0.021      4.330      0.000
+    Category 2         0.908      0.021     42.968      0.000
+ INITIAT
+    Category 1         0.093      0.021      4.337      0.000
+    Category 2         0.907      0.021     42.507      0.000
+ ENGAGE
+    Category 1         0.133      0.025      5.272      0.000
+    Category 2         0.867      0.025     34.274      0.000
+ APPROACH
+    Category 1         0.095      0.022      4.400      0.000
+    Category 2         0.905      0.022     41.886      0.000
+ RESPONSE
+    Category 1         0.093      0.021      4.349      0.000
+    Category 2         0.907      0.021     42.391      0.000
+ EXPECT
+    Category 1         0.091      0.022      4.243      0.000
+    Category 2         0.909      0.022     42.209      0.000
+ NEW
+    Category 1         0.054      0.017      3.216      0.001
+    Category 2         0.946      0.017     56.469      0.000
+ SAME
+    Category 1         0.116      0.024      4.793      0.000
+    Category 2         0.884      0.024     36.401      0.000
+ RELATIVE
+    Category 1         0.110      0.024      4.560      0.000
+    Category 2         0.890      0.024     36.981      0.000
+ OBJECTS
+    Category 1         0.037      0.014      2.666      0.008
+    Category 2         0.963      0.014     69.279      0.000
+ SEQUENCE
+    Category 1         0.101      0.022      4.527      0.000
+    Category 2         0.899      0.022     40.207      0.000
+ TRANS
+    Category 1         0.052      0.016      3.233      0.001
+    Category 2         0.948      0.016     58.943      0.000
+ AVOID
+    Category 1         0.103      0.023      4.388      0.000
+    Category 2         0.897      0.023     38.411      0.000
+ CONTROL
+    Category 1         0.124      0.025      4.964      0.000
+    Category 2         0.876      0.025     34.919      0.000
+ TOUCH
+    Category 1         0.162      0.028      5.869      0.000
+    Category 2         0.838      0.028     30.327      0.000
+
+Latent Class 5
+
+ PRIMARY
+    Category 1         0.981      0.005    191.901      0.000
+    Category 2         0.019      0.005      3.801      0.000
+ CHANGE
+    Category 1         0.766      0.015     50.358      0.000
+    Category 2         0.234      0.015     15.368      0.000
+ INTERUPT
+    Category 1         0.920      0.010     93.449      0.000
+    Category 2         0.080      0.010      8.123      0.000
+ INITIAT
+    Category 1         0.765      0.015     50.035      0.000
+    Category 2         0.235      0.015     15.411      0.000
+ ENGAGE
+    Category 1         0.989      0.004    256.208      0.000
+    Category 2         0.011      0.004      2.937      0.003
+ APPROACH
+    Category 1         0.820      0.014     59.233      0.000
+    Category 2         0.180      0.014     13.041      0.000
+ RESPONSE
+    Category 1         0.892      0.011     79.592      0.000
+    Category 2         0.108      0.011      9.613      0.000
+ EXPECT
+    Category 1         0.928      0.009     99.324      0.000
+    Category 2         0.072      0.009      7.673      0.000
+ NEW
+    Category 1         0.080      0.010      7.985      0.000
+    Category 2         0.920      0.010     91.310      0.000
+ SAME
+    Category 1         0.261      0.016     16.468      0.000
+    Category 2         0.739      0.016     46.663      0.000
+ RELATIVE
+    Category 1         0.144      0.013     11.223      0.000
+    Category 2         0.856      0.013     66.767      0.000
+ OBJECTS
+    Category 1         0.242      0.015     15.618      0.000
+    Category 2         0.758      0.015     48.950      0.000
+ SEQUENCE
+    Category 1         0.299      0.016     18.175      0.000
+    Category 2         0.701      0.016     42.511      0.000
+ TRANS
+    Category 1         0.291      0.016     17.804      0.000
+    Category 2         0.709      0.016     43.448      0.000
+ AVOID
+    Category 1         0.247      0.016     15.873      0.000
+    Category 2         0.753      0.016     48.285      0.000
+ CONTROL
+    Category 1         0.143      0.013     11.221      0.000
+    Category 2         0.857      0.013     67.054      0.000
+ TOUCH
+    Category 1         0.295      0.016     17.946      0.000
+    Category 2         0.705      0.016     42.938      0.000
+
+
+LATENT CLASS INDICATOR ODDS RATIOS FOR THE LATENT CLASSES
+
+                                                95% C.I.
+                    Estimate       S.E.  Lower 2.5% Upper 2.5%
+
+Latent Class 1 Compared to Latent Class 2
+
+ PRIMARY
+    Category > 1      39.202     13.848     19.616     78.341
+ CHANGE
+    Category > 1      12.944      2.642      8.676     19.311
+ INTERUPT
+    Category > 1      19.532      4.361     12.609     30.256
+ INITIAT
+    Category > 1     170.480    125.913     40.085    725.045
+ ENGAGE
+    Category > 1      19.073      4.761     11.694     31.109
+ APPROACH
+    Category > 1      30.831      9.375     16.988     55.954
+ RESPONSE
+    Category > 1      36.718     11.025     20.383     66.141
+ EXPECT
+    Category > 1      21.753      5.195     13.621     34.739
+ NEW
+    Category > 1       2.605      0.555      1.716      3.955
+ SAME
+    Category > 1       0.739      0.235      0.396      1.378
+ RELATIVE
+    Category > 1       1.821      0.462      1.108      2.993
+ OBJECTS
+    Category > 1     237.112     92.629    110.261    509.900
+ SEQUENCE
+    Category > 1      35.399      8.131     22.567     55.530
+ TRANS
+    Category > 1      21.774      4.348     14.722     32.203
+ AVOID
+    Category > 1       1.882      0.343      1.317      2.690
+ CONTROL
+    Category > 1       2.958      0.839      1.697      5.156
+ TOUCH
+    Category > 1       5.674      1.671      3.186     10.106
+
+Latent Class 1 Compared to Latent Class 3
+
+ PRIMARY
+    Category > 1       0.390      0.046      0.310      0.491
+ CHANGE
+    Category > 1       0.550      0.065      0.437      0.692
+ INTERUPT
+    Category > 1       0.436      0.055      0.341      0.557
+ INITIAT
+    Category > 1       0.242      0.032      0.187      0.315
+ ENGAGE
+    Category > 1       0.592      0.068      0.473      0.741
+ APPROACH
+    Category > 1       0.417      0.050      0.330      0.527
+ RESPONSE
+    Category > 1       0.360      0.046      0.280      0.463
+ EXPECT
+    Category > 1       0.288      0.038      0.222      0.374
+ NEW
+    Category > 1       1.037      0.135      0.805      1.338
+ SAME
+    Category > 1       0.189      0.044      0.120      0.298
+ RELATIVE
+    Category > 1       0.421      0.063      0.314      0.565
+ OBJECTS
+    Category > 1      54.742     10.793     37.195     80.566
+ SEQUENCE
+    Category > 1      49.296      9.086     34.350     70.745
+ TRANS
+    Category > 1      25.335      3.962     18.647     34.421
+ AVOID
+    Category > 1       1.253      0.157      0.980      1.601
+ CONTROL
+    Category > 1       7.258      1.837      4.420     11.919
+ TOUCH
+    Category > 1       2.170      0.321      1.623      2.901
+
+Latent Class 1 Compared to Latent Class 4
+
+ PRIMARY
+    Category > 1       0.106      0.032      0.059      0.190
+ CHANGE
+    Category > 1       0.200      0.050      0.122      0.326
+ INTERUPT
+    Category > 1       0.191      0.052      0.113      0.325
+ INITIAT
+    Category > 1       0.163      0.044      0.096      0.276
+ ENGAGE
+    Category > 1       0.215      0.051      0.135      0.342
+ APPROACH
+    Category > 1       0.160      0.043      0.095      0.270
+ RESPONSE
+    Category > 1       0.184      0.050      0.109      0.312
+ EXPECT
+    Category > 1       0.184      0.051      0.107      0.315
+ NEW
+    Category > 1       0.018      0.006      0.009      0.035
+ SAME
+    Category > 1       0.007      0.002      0.004      0.013
+ RELATIVE
+    Category > 1       0.019      0.005      0.011      0.033
+ OBJECTS
+    Category > 1       0.278      0.118      0.121      0.637
+ SEQUENCE
+    Category > 1       0.459      0.127      0.266      0.789
+ TRANS
+    Category > 1       0.205      0.071      0.104      0.403
+ AVOID
+    Category > 1       0.042      0.011      0.025      0.072
+ CONTROL
+    Category > 1       0.026      0.007      0.016      0.043
+ TOUCH
+    Category > 1       0.056      0.013      0.036      0.087
+
+Latent Class 1 Compared to Latent Class 5
+
+ PRIMARY
+    Category > 1      62.763     17.703     36.109    109.093
+ CHANGE
+    Category > 1       5.186      0.630      4.087      6.581
+ INTERUPT
+    Category > 1      21.825      3.513     15.919     29.921
+ INITIAT
+    Category > 1       5.185      0.633      4.081      6.587
+ ENGAGE
+    Category > 1     121.954     43.322     60.788    244.669
+ APPROACH
+    Category > 1       6.924      0.883      5.392      8.891
+ RESPONSE
+    Category > 1      14.857      2.175     11.150     19.795
+ EXPECT
+    Category > 1      23.673      3.935     17.090     32.790
+ NEW
+    Category > 1       0.027      0.005      0.019      0.038
+ SAME
+    Category > 1       0.019      0.004      0.012      0.030
+ RELATIVE
+    Category > 1       0.026      0.004      0.019      0.036
+ OBJECTS
+    Category > 1       2.307      0.427      1.606      3.315
+ SEQUENCE
+    Category > 1       1.741      0.260      1.300      2.332
+ TRANS
+    Category > 1       1.530      0.211      1.168      2.004
+ AVOID
+    Category > 1       0.121      0.015      0.095      0.156
+ CONTROL
+    Category > 1       0.031      0.005      0.023      0.042
+ TOUCH
+    Category > 1       0.120      0.015      0.093      0.155
+
+Latent Class 2 Compared to Latent Class 3
+
+ PRIMARY
+    Category > 1       0.010      0.003      0.005      0.020
+ CHANGE
+    Category > 1       0.043      0.008      0.029      0.063
+ INTERUPT
+    Category > 1       0.022      0.005      0.014      0.034
+ INITIAT
+    Category > 1       0.001      0.001      0.000      0.006
+ ENGAGE
+    Category > 1       0.031      0.008      0.019      0.050
+ APPROACH
+    Category > 1       0.014      0.004      0.007      0.024
+ RESPONSE
+    Category > 1       0.010      0.003      0.005      0.018
+ EXPECT
+    Category > 1       0.013      0.003      0.008      0.021
+ NEW
+    Category > 1       0.398      0.080      0.268      0.591
+ SAME
+    Category > 1       0.256      0.063      0.158      0.416
+ RELATIVE
+    Category > 1       0.231      0.053      0.147      0.363
+ OBJECTS
+    Category > 1       0.231      0.085      0.112      0.477
+ SEQUENCE
+    Category > 1       1.393      0.326      0.880      2.205
+ TRANS
+    Category > 1       1.164      0.228      0.792      1.709
+ AVOID
+    Category > 1       0.666      0.115      0.475      0.934
+ CONTROL
+    Category > 1       2.454      0.832      1.262      4.770
+ TOUCH
+    Category > 1       0.382      0.113      0.215      0.681
+
+Latent Class 2 Compared to Latent Class 4
+
+ PRIMARY
+    Category > 1       0.003      0.001      0.001      0.006
+ CHANGE
+    Category > 1       0.015      0.005      0.009      0.028
+ INTERUPT
+    Category > 1       0.010      0.003      0.005      0.019
+ INITIAT
+    Category > 1       0.001      0.001      0.000      0.004
+ ENGAGE
+    Category > 1       0.011      0.004      0.006      0.021
+ APPROACH
+    Category > 1       0.005      0.002      0.002      0.011
+ RESPONSE
+    Category > 1       0.005      0.002      0.002      0.011
+ EXPECT
+    Category > 1       0.008      0.003      0.004      0.016
+ NEW
+    Category > 1       0.007      0.003      0.003      0.014
+ SAME
+    Category > 1       0.010      0.003      0.005      0.018
+ RELATIVE
+    Category > 1       0.010      0.003      0.005      0.020
+ OBJECTS
+    Category > 1       0.001      0.001      0.000      0.003
+ SEQUENCE
+    Category > 1       0.013      0.004      0.007      0.024
+ TRANS
+    Category > 1       0.009      0.003      0.005      0.019
+ AVOID
+    Category > 1       0.022      0.007      0.013      0.040
+ CONTROL
+    Category > 1       0.009      0.003      0.004      0.017
+ TOUCH
+    Category > 1       0.010      0.003      0.005      0.019
+
+Latent Class 2 Compared to Latent Class 5
+
+ PRIMARY
+    Category > 1       1.601      0.698      0.681      3.762
+ CHANGE
+    Category > 1       0.401      0.082      0.269      0.597
+ INTERUPT
+    Category > 1       1.117      0.273      0.692      1.805
+ INITIAT
+    Category > 1       0.030      0.022      0.007      0.129
+ ENGAGE
+    Category > 1       6.394      2.666      2.824     14.476
+ APPROACH
+    Category > 1       0.225      0.069      0.123      0.409
+ RESPONSE
+    Category > 1       0.405      0.126      0.220      0.745
+ EXPECT
+    Category > 1       1.088      0.287      0.650      1.823
+ NEW
+    Category > 1       0.010      0.002      0.007      0.016
+ SAME
+    Category > 1       0.026      0.006      0.016      0.042
+ RELATIVE
+    Category > 1       0.014      0.003      0.009      0.023
+ OBJECTS
+    Category > 1       0.010      0.004      0.005      0.020
+ SEQUENCE
+    Category > 1       0.049      0.010      0.033      0.074
+ TRANS
+    Category > 1       0.070      0.013      0.049      0.101
+ AVOID
+    Category > 1       0.064      0.011      0.046      0.091
+ CONTROL
+    Category > 1       0.010      0.003      0.006      0.018
+ TOUCH
+    Category > 1       0.021      0.006      0.012      0.037
+
+Latent Class 3 Compared to Latent Class 4
+
+ PRIMARY
+    Category > 1       0.272      0.080      0.153      0.485
+ CHANGE
+    Category > 1       0.363      0.089      0.224      0.587
+ INTERUPT
+    Category > 1       0.439      0.117      0.260      0.741
+ INITIAT
+    Category > 1       0.672      0.183      0.395      1.145
+ ENGAGE
+    Category > 1       0.363      0.083      0.232      0.570
+ APPROACH
+    Category > 1       0.384      0.101      0.230      0.643
+ RESPONSE
+    Category > 1       0.511      0.137      0.302      0.864
+ EXPECT
+    Category > 1       0.639      0.176      0.372      1.097
+ NEW
+    Category > 1       0.017      0.006      0.009      0.033
+ SAME
+    Category > 1       0.037      0.009      0.023      0.061
+ RELATIVE
+    Category > 1       0.045      0.012      0.027      0.075
+ OBJECTS
+    Category > 1       0.005      0.002      0.002      0.011
+ SEQUENCE
+    Category > 1       0.009      0.003      0.005      0.016
+ TRANS
+    Category > 1       0.008      0.003      0.004      0.016
+ AVOID
+    Category > 1       0.034      0.009      0.020      0.057
+ CONTROL
+    Category > 1       0.004      0.001      0.002      0.007
+ TOUCH
+    Category > 1       0.026      0.006      0.016      0.040
+
+Latent Class 3 Compared to Latent Class 5
+
+ PRIMARY
+    Category > 1     160.745     44.794     93.096    277.551
+ CHANGE
+    Category > 1       9.424      1.055      7.568     11.736
+ INTERUPT
+    Category > 1      50.060      7.874     36.780     68.136
+ INITIAT
+    Category > 1      21.383      2.739     16.636     27.486
+ ENGAGE
+    Category > 1     205.983     72.385    103.444    410.166
+ APPROACH
+    Category > 1      16.612      2.019     13.092     21.079
+ RESPONSE
+    Category > 1      41.238      5.998     31.009     54.842
+ EXPECT
+    Category > 1      82.223     13.905     59.025    114.538
+ NEW
+    Category > 1       0.026      0.004      0.019      0.035
+ SAME
+    Category > 1       0.100      0.011      0.081      0.125
+ RELATIVE
+    Category > 1       0.062      0.008      0.048      0.079
+ OBJECTS
+    Category > 1       0.042      0.006      0.032      0.055
+ SEQUENCE
+    Category > 1       0.035      0.006      0.026      0.048
+ TRANS
+    Category > 1       0.060      0.008      0.047      0.078
+ AVOID
+    Category > 1       0.097      0.011      0.078      0.121
+ CONTROL
+    Category > 1       0.004      0.001      0.003      0.007
+ TOUCH
+    Category > 1       0.055      0.007      0.043      0.071
+
+Latent Class 4 Compared to Latent Class 5
+
+ PRIMARY
+    Category > 1     590.458    230.910    274.349   1270.790
+ CHANGE
+    Category > 1      25.991      6.483     15.940     42.379
+ INTERUPT
+    Category > 1     114.152     32.813     64.983    200.525
+ INITIAT
+    Category > 1      31.820      8.526     18.820     53.800
+ ENGAGE
+    Category > 1     567.059    231.482    254.770   1262.142
+ APPROACH
+    Category > 1      43.235     11.590     25.565     73.117
+ RESPONSE
+    Category > 1      80.716     22.537     46.697    139.517
+ EXPECT
+    Category > 1     128.754     37.996     72.204    229.593
+ NEW
+    Category > 1       1.536      0.547      0.764      3.086
+ SAME
+    Category > 1       2.680      0.670      1.642      4.375
+ RELATIVE
+    Category > 1       1.363      0.364      0.807      2.302
+ OBJECTS
+    Category > 1       8.292      3.306      3.796     18.115
+ SEQUENCE
+    Category > 1       3.797      0.980      2.290      6.297
+ TRANS
+    Category > 1       7.471      2.509      3.869     14.428
+ AVOID
+    Category > 1       2.877      0.769      1.704      4.859
+ CONTROL
+    Category > 1       1.177      0.297      0.718      1.931
+ TOUCH
+    Category > 1       2.159      0.471      1.408      3.312
+
+
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     %OVERALL%
+
+     [ c#1*-0.21630 ];
+     [ c#2*-0.89507 ];
+     [ c#3*0.30589 ];
+     [ c#4*-1.40116 ];
+
+     %C#1%
+
+     [ primary$1*-0.21760 ];
+     [ change$1*-0.45914 ];
+     [ interupt$1*-0.64034 ];
+     [ initiat$1*-0.46809 ];
+     [ engage$1*-0.33510 ];
+     [ approach$1*-0.42163 ];
+     [ response$1*-0.58459 ];
+     [ expect$1*-0.60368 ];
+     [ new$1*1.17714 ];
+     [ same$1*2.92160 ];
+     [ relative$1*1.86782 ];
+     [ objects$1*-1.97843 ];
+     [ sequence$1*-1.40431 ];
+     [ trans$1*-1.31741 ];
+     [ avoid$1*0.99669 ];
+     [ control$1*1.69313 ];
+     [ touch$1*1.24603 ];
+
+     %C#2%
+
+     [ primary$1*3.45112 ];
+     [ change$1*2.10148 ];
+     [ interupt$1*2.33173 ];
+     [ initiat$1*4.67053 ];
+     [ engage$1*2.61317 ];
+     [ approach$1*3.00689 ];
+     [ response$1*3.01867 ];
+     [ expect$1*2.47608 ];
+     [ new$1*2.13464 ];
+     [ same$1*2.61928 ];
+     [ relative$1*2.46710 ];
+     [ objects$1*3.49010 ];
+     [ sequence$1*2.16238 ];
+     [ trans$1*1.76331 ];
+     [ avoid$1*1.62916 ];
+     [ control$1*2.77768 ];
+     [ touch$1*2.98188 ];
+
+     %C#3%
+
+     [ primary$1*-1.15805 ];
+     [ change$1*-1.05640 ];
+     [ interupt$1*-1.47052 ];
+     [ initiat$1*-1.88494 ];
+     [ engage$1*-0.85925 ];
+     [ approach$1*-1.29676 ];
+     [ response$1*-1.60551 ];
+     [ expect$1*-1.84879 ];
+     [ new$1*1.21384 ];
+     [ same$1*1.25810 ];
+     [ relative$1*1.00299 ];
+     [ objects$1*2.02420 ];
+     [ sequence$1*2.49353 ];
+     [ trans$1*1.91476 ];
+     [ avoid$1*1.22229 ];
+     [ control$1*3.67528 ];
+     [ touch$1*2.02070 ];
+
+     %C#4%
+
+     [ primary$1*-2.45913 ];
+     [ change$1*-2.07089 ];
+     [ interupt$1*-2.29483 ];
+     [ initiat$1*-2.28241 ];
+     [ engage$1*-1.87192 ];
+     [ approach$1*-2.25327 ];
+     [ response$1*-2.27708 ];
+     [ expect$1*-2.29726 ];
+     [ new$1*-2.86563 ];
+     [ same$1*-2.02751 ];
+     [ relative$1*-2.09303 ];
+     [ objects$1*-3.25774 ];
+     [ sequence$1*-2.18406 ];
+     [ trans$1*-2.90318 ];
+     [ avoid$1*-2.16937 ];
+     [ control$1*-1.95077 ];
+     [ touch$1*-1.64226 ];
+
+     %C#5%
+
+     [ primary$1*3.92177 ];
+     [ change$1*1.18687 ];
+     [ interupt$1*2.44270 ];
+     [ initiat$1*1.17768 ];
+     [ engage$1*4.46855 ];
+     [ approach$1*1.51338 ];
+     [ response$1*2.11385 ];
+     [ expect$1*2.56064 ];
+     [ new$1*-2.43669 ];
+     [ same$1*-1.04154 ];
+     [ relative$1*-1.78324 ];
+     [ objects$1*-1.14240 ];
+     [ sequence$1*-0.84974 ];
+     [ trans$1*-0.89213 ];
+     [ avoid$1*-1.11250 ];
+     [ control$1*-1.78770 ];
+     [ touch$1*-0.87239 ];
+
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms (sample values)
+  Scatterplots (sample values)
+  Sample proportions and estimated probabilities
+
+     Beginning Time:  13:24:26
+        Ending Time:  13:25:00
+       Elapsed Time:  00:00:34
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2021 Muthen & Muthen

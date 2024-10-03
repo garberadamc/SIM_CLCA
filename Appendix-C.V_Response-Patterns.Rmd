@@ -1,0 +1,196 @@
+---
+title: 'Appendix C.V: Pesponse Pattern Tile Plot'
+author: "Adam Garber"
+date: 'Updated: October 2, 2024'
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message = FALSE, warning = FALSE)
+```
+
+Load packages
+```{r, eval=TRUE}
+#library(MplusAutomation)  # A conduit between R & Mplus
+library(here)             # To locate or send files within the Rproject folder
+library(glue)             # To insert R code within strings
+library(gt)               # For pretty tables
+library(reshape2)         # For manipulating plot data
+library(cowplot)          # For pretty plots
+library(patchwork)        # To effortlessly combine plots
+library(tidyverse)        # For everything else...
+```
+
+Read data file `n_3000_lca_rep1.dat` (N=3000; Replication 1)
+```{r}
+sim_data <- read.delim2(here("C1-Simulation", "n_3000_lca_rep1.dat"),
+  sep = "", header = FALSE) %>%
+  select(-V18) %>% 
+  setNames(
+    c("primary", "change", "interupt", "initiat", "engage", "approach", "response", "expect",
+      "new", "same", "relative", "objects", "sequence", "trans", "avoid", "control", "touch")) %>% 
+  purrr::modify_if(is.character, as.numeric)  %>% 
+  select(1:5)
+  
+```
+
+Identify each response patterns and label (`pattern_id`)
+```{r}
+resp_data <- sim_data %>%
+  mutate(pattern = pmap_chr(list(primary, change, interupt, initiat, engage), ~ paste0(..1, ..2, ..3, ..4, ..5))) %>%
+  mutate(pattern_id = dense_rank(pattern))
+```
+
+```{r}
+order_highest <- resp_data %>% 
+  group_by(pattern) %>% 
+  summarize(frequency = n(),
+            primary = first(primary),
+            change = first(change),
+            interupt = first(interupt),
+            initiat = first(initiat),
+            engage = first(engage)) %>% 
+  arrange(desc(frequency)) %>% 
+  ungroup() %>% 
+  head(9)
+```
+
+Generate Table 28
+```{r}
+order_highest %>% gt()
+```
+
+```{r, eval=TRUE}
+
+plot_lca_function <- function(df,class_dist,item_num,class_num,freq=1, lty,
+                              item_labels=c("Primary","Change", "Interupt","Initiate", "Engage"),
+                              legend_position="none", class_labels,plot_title=""){
+
+plot_data <- as.data.frame(df)
+
+c_size <- as.data.frame(class_dist)
+colnames(c_size) <- paste0("cs")
+c_size <- c_size %>% mutate(cs = round(cs*100, 2))
+colnames(plot_data) <- paste0(class_labels, glue(" ({c_size[1:class_num,]}%)"))
+
+plot_data <- cbind(Var = paste0("U", 1:item_num), plot_data)
+plot_data$Var <- factor(plot_data$Var,
+               labels = item_labels)
+plot_data$Var <- fct_inorder(plot_data$Var)
+
+pd_long_data <- melt(plot_data, id.vars = "Var") 
+
+# This syntax uses the data.frame created above to produce the plot with `ggplot()`
+
+p <- pd_long_data %>%
+  ggplot(aes(x = as.integer(Var), y = value,
+  shape = variable, colour = variable)) +
+  geom_point(size = 4) + geom_line( size=freq, lty = lty ) + 
+  scale_x_continuous("", breaks = 1:item_num, labels = item_labels) + 
+  scale_y_continuous(limits = c(0,1), n.breaks = 5) +
+  scale_colour_grey() + 
+  labs(title = plot_title, y = "") +
+  theme_cowplot() +
+  theme(legend.title = element_blank(), 
+        legend.position = legend_position, 
+        axis.text.x = element_text(size = 10, vjust = 1))
+
+p
+return(p)
+}
+
+```
+
+
+
+## Response pattern tile plot (Figure 7)
+```{r}
+a <- plot_lca_function(
+  df = list(c1 = rep(0,5)), 
+  class_dist = 1,
+  freq = 3, lty = 1,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 1 (f=619)")
+  
+b <- plot_lca_function(
+  df = list(c1 = rep(1,5)), 
+  class_dist = 1,
+  freq = 2.5, lty = 2,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 2 (f=487)")
+
+c <- plot_lca_function(
+  df = list(c1 = c(rep(1,4), rep(0,1))), 
+  class_dist = 1,
+  freq = 2, lty = 3,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 3 (f=188)")
+
+d <- plot_lca_function(
+  df = list(c1 = c(rep(0,1),rep(1,1), rep(0,3))), 
+  class_dist = 1,
+  freq = 2, lty = 3,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 4 (f=173)")
+
+e <- plot_lca_function(
+  df = list(c1 = c(rep(0,3),rep(1,1), rep(0,1))), 
+  class_dist = 1,
+  freq = 1.5, lty = 4,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 5 (f=164)")
+
+f <- plot_lca_function(
+  df = list(c1 = c(rep(1,1),rep(0,1), rep(1,3))), 
+  class_dist = 1,
+  freq = 1, lty = 5,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 6 (f=156)")
+
+g <- plot_lca_function(
+  df = list(c1 = c(rep(0,1),rep(1,4))), 
+  class_dist = 1,
+  freq = .5, lty = 6,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 7 (f=154)")
+
+h <- plot_lca_function(
+  df = list(c1 = c(rep(0,2), rep(1,1), rep(0,2))), 
+  class_dist = 1,
+  freq = .3, lty = 7,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 8 (f=104)")
+
+i <- plot_lca_function(
+  df = list(c1 = c(rep(1,3), rep(0,1), rep(1,1))), 
+  class_dist = 1,
+  freq = .15, lty = 8,
+  item_num = 5, class_num = 1,
+  class_labels = c("Class-1"),
+  plot_title = "Pattern 9 (f=88)")
+
+(a+b+c)/(d+e+f)/(g+h+i)
+```
+
+Save Figure 7
+```{r, eval=FALSE}
+ggsave(here("figures", "CV_pattrn_tile_plot.png"), dpi=300, height=9, width=10, units="in")
+```
+
+
+
+
+
+
+
+

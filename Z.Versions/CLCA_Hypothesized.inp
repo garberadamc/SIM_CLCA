@@ -1,0 +1,180 @@
+TITLE:
+Hypothesized Model
+DATA:
+FILE = "/Users/agarber/github/SIM_CLCA/C3-Hypothesized/CLCA_Hypothesized.dat";
+ 
+VARIABLE:
+NAMES = primary change interupt initiat engage approach response expect new same
+     relative objects sequence trans avoid control touch; 
+ MISSING=.;
+ categorical = primary-touch; 
+    usevar = primary-touch;
+    classes = c(5); 
+ANALYSIS:
+estimator = mlr; 
+    type = mixture;
+    !starts = 500 200;
+    !STSEED = 21345; !!! USE SEED TO REPLICATE THESIS RESULTS !!!
+   
+MODEL:
+!!! NAME & LABEL PARAMETERS !!!
+  
+     %OVERALL%
+     
+     %C#1%       !!!High_Flex!!!
+  
+     [ primary$1 ](t1);
+     [ change$1  ](t2);
+     [ interupt$1](t3);
+     [ initiat$1 ](t4);
+     [ engage$1  ](t5);
+     [ approach$1](t6);
+     [ response$1](t7);
+     [ expect$1  ](t8);
+     [ new$1     ](t9);
+     [ same$1    ](t10);
+     [ relative$1](t11);
+     [ objects$1 ](t12);
+     [ sequence$1](t13);
+     [ trans$1   ](t14);
+     [ avoid$1   ](t15);
+     [ control$1 ](t16);
+     [ touch$1   ](t17);
+  
+     %C#2%       !!!ScIn_Flex!!!
+  
+     [ primary$1 ](t18);
+     [ change$1  ](t19);
+     [ interupt$1](t20);
+     [ initiat$1 ](t21);
+     [ engage$1  ](t22);
+     [ approach$1](t23);
+     [ response$1](t24);
+     [ expect$1  ](t25);
+     [ new$1     ](t26);
+     [ same$1    ](t27);
+     [ relative$1](t28);
+     [ objects$1 ](t29);
+     [ sequence$1](t30);
+     [ trans$1   ](t31);
+     [ avoid$1   ](t32);
+     [ control$1 ](t33);
+     [ touch$1   ](t34);
+  
+     %C#3%        !!!LocSnsLo!!!
+  
+     [ primary$1 ](t35);
+     [ change$1  ](t36);
+     [ interupt$1](t37);
+     [ initiat$1 ](t38);
+     [ engage$1  ](t39);
+     [ approach$1](t40);
+     [ response$1](t41);
+     [ expect$1  ](t42);
+     [ new$1     ](t43);
+     [ same$1    ](t44);
+     [ relative$1](t45);
+     [ objects$1 ](t46);
+     [ sequence$1](t47);
+     [ trans$1   ](t48);
+     [ avoid$1   ](t49);
+     [ control$1 ](t50);
+     [ touch$1   ](t51);
+  
+     %C#4%     !!!Env_Flex !!!  
+  
+     [ primary$1 ](t52);
+     [ change$1  ](t53);
+     [ interupt$1](t54);
+     [ initiat$1 ](t55);
+     [ engage$1  ](t56);
+     [ approach$1](t57);
+     [ response$1](t58);
+     [ expect$1  ](t59);
+     [ new$1     ](t60);
+     [ same$1    ](t61);
+     [ relative$1](t62);
+     [ objects$1 ](t63);
+     [ sequence$1](t64);
+     [ trans$1   ](t65);
+     [ avoid$1   ](t66);
+     [ control$1 ](t67);
+     [ touch$1   ](t68);
+  
+     %C#5%         !!!Low_Flex!!!
+  
+     [ primary$1 ](t69);
+     [ change$1  ](t70);
+     [ interupt$1](t71);
+     [ initiat$1 ](t72);
+     [ engage$1  ](t73);
+     [ approach$1](t74);
+     [ response$1](t75);
+     [ expect$1  ](t76);
+     [ new$1     ](t77);
+     [ same$1    ](t78);
+     [ relative$1](t79);
+     [ objects$1 ](t80);
+     [ sequence$1](t81);
+     [ trans$1   ](t82);
+     [ avoid$1   ](t83);
+     [ control$1 ](t84);
+     [ touch$1   ](t85);
+    
+MODEL CONSTRAINT:
+
+  !!!       THRESHOLD BOUNDARIES            !!!
+  !!! -.85 (THRESHOLD) ~ .70 (PROBABILTY)   !!!
+  !!!  .85 (THRESHOLD) ~ .30 (PROBABILTY)   !!!
+     
+  ! LABELS C1-C5 BELOW REFLECT ORDER OF CLASSES IN PLOT (NOT MPLUS C# LABELS ABOVE)
+  
+     !   C1    |   C2    |   C3    |   C4   |    C5  !
+     !High_Flex|ScIn_Flex|Env_Flex |LocSnsLo|Low_Flex!
+     !_________|_________|_________|________|________!
+     !t1 <-.8; t18<-.8; t35> .8;           t69> .8;  !!!U1 !!!
+     !t2 <-.8; t19<-.8; t36> .8;           t70> .8;  !!!U2 !!!
+     !t3 <-.8; t20<-.8; t37> .8;           t71> .8;  !!!U3 !!!
+     !t4 <-.8; t21<-.8; t38> .8;           t72> .8;  !!!U4 !!!
+     !t5 <-.8; t22<-.8; t39> .8;           t73> .8;  !!!U5 !!!
+     !t6 <-.8; t23<-.8; t40> .8;           t74> .8;  !!!U6 !!!
+     !t7 <-.8; t24<-.8; t41> .8;           t75> .8;  !!!U7 !!!
+     !t8 <-.8; t25<-.8; t42> .8;           t76> .8;  !!!U8 !!!
+     !
+     !t9 <-.8; t26> .8; t43<-.8; t60> .8;  t77> .8;  !!!U9 !!!
+     !t10<-.8; t27> .8; t44<-.8; t61> .8;  t78> .8;  !!!U10!!!
+     !t11<-.8; t28> .8; t45<-.8; t62> .8;  t79> .8;  !!!U11!!!
+     !t12<-.8; t29> .8; t46<-.8; t63<-.8;  t80> .8;  !!!U12!!!
+     !t13<-.8; t30> .8; t47<-.8; t64<-.8;  t81> .8;  !!!U13!!!
+     !t14<-.8; t31> .8; t48<-.8; t65<-.8;  t82> .8;  !!!U14!!!
+     !t15<-.8; t32> .8; t49<-.8; t66> .8;  t83> .8;  !!!U15!!!
+     !t16<-.8; t33> .8; t50<-.8; t67> .8;  t84> .8;  !!!U16!!!
+     !t17<-.8; t34> .8; t51<-.8; t68> .8;  t85> .8;  !!!U17!!!
+      
+  !!!       EQUALITY (& INEQUALITY) CONSTRAINTS       !!!
+     
+     !  C1vC2  |  C3vC4  |  C4vC5  !
+     !_________|_________|_________!
+                t35=-t52;           !!!U1 !!!
+                t36=-t53;           !!!U2 !!!
+                t37=-t54;           !!!U3 !!!
+                t38=-t55;           !!!U4 !!!
+                t39=-t56;           !!!U5 !!!
+                t40=-t57;           !!!U6 !!!
+                t41=-t58;           !!!U7 !!!
+                t42=-t59;           !!!U8 !!!
+      t9 =-t26;                     !!!U9 !!!
+      t10=-t27;                     !!!U10!!!
+      t11=-t28;                     !!!U11!!!
+      t12=-t29;           t63=-t80; !!!U12!!!
+      t13=-t30;           t64=-t81; !!!U13!!!
+      t14=-t31;           t65=-t82; !!!U14!!!
+      t15=-t32;                     !!!U15!!!
+      t16=-t33;                     !!!U16!!!
+      t17=-t34;                     !!!U17!!!
+  
+OUTPUT:
+tech14;
+PLOT:
+type = plot3; 
+          series = primary-touch(*);

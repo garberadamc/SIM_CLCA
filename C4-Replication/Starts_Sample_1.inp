@@ -1,0 +1,23 @@
+TITLE:
+Starts - Sample 1
+DATA:
+FILE = "/Users/agarber/github/SIM_CLCA/C4-Replication/Starts_Sample_1.dat";
+ 
+VARIABLE:
+NAMES = primary change interupt initiat engage approach response expect new same
+     relative objects sequence trans avoid control touch sample; 
+ MISSING=.;
+ categorical = primary-touch; 
+    usevar = primary-touch;
+    classes = c(5); 
+ANALYSIS:
+estimator = mlr; 
+    type = mixture; 
+    starts = 500 200;
+    !STSEED = ; !!! USE SEED TO REPLICATE THESIS RESULTS !!!
+   
+OUTPUT:
+svalues;
+PLOT:
+type = plot3; 
+          series = primary-touch(*);

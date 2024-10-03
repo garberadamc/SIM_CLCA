@@ -1,0 +1,126 @@
+TITLE:
+LCA Power Simulation: Condition N = 1000
+MONTECARLO:
+NAMES = primary change interupt initiat engage approach response expect
+         new same relative objects sequence trans avoid control touch;
+GENERATE = primary change interupt initiat engage approach response expect
+         new same relative objects sequence trans avoid control touch(1);
+CATEGORICAL = primary change interupt initiat engage approach response expect
+         new same relative objects sequence trans avoid control touch;
+GENCLASSES = c(5);
+CLASSES = c(5);
+NOBSERVATIONS = 1000;
+SEED = 08202024;
+	NREPS = 1000; 
+ repsave = all;
+ save = n_1000_lca_rep*.dat;
+ RESULTS = lcaresults1000.csv;
+MODEL POPULATION:
+%OVERALL%
+  
+       [c#1*-0.466]; !!! c1 = 6.1%  !!!
+       [c#2* 1.279]; !!! c2 = 35.4% !!! 
+       [c#3* 1.041]; !!! c3 = 27.9% !!!
+       [c#4* 0.739]; !!! c4 = 20.6% !!!
+                     !!! c5 = 9.8%  !!!
+  
+!!! Class 1: High Flexibility !!! 
+
+%c#1% 
+[primary$1*-2.325907 change$1*-1.815290 interupt$1*-1.945910 initiat$1*-2.090741
+ engage$1*-1.840434 approach$1*-2.231012 response$1*-2.556366 expect$1*-2.231012
+ new$1*-2.987364 same$1*- 2.428837 relative$1*-2.254058 objects$1*-3.555
+ sequence$1*-2.132267 trans$1*-3.152319 avoid$1*-2.699549 control$1*-2.050519
+ touch$1*-1.774368];
+
+!!! Class 2: Social and Interest Flexibility !!!
+%c#2% 
+[primary$1*-1.0773913 change$1*-1.1039528 interupt$1*-1.5299568 initiat$1*-1.9550845 
+ engage$1*-0.9643905 approach$1*-1.3370233 response$1*-1.5299568 expect$1*-1.9187592
+ new$1*1.1914483 same$1*1.2891306 relative$1*0.8905323 objects$1*1.9367985 
+ sequence$1*2.4838238 trans$1*1.9643226 avoid$1*1.2540491 control$1*3.555
+ touch$1*2.1972246];
+
+!!! Class 3: Environmetal Flexibility !!!
+
+%c#3% 
+[primary$1*3.7489924 change$1*1.2139664 interupt$1*2.4423470 initiat$1*1.1200608
+ engage$1*4.4987991 approach$1*1.4500102 response$1*2.0211513 expect$1*2.7339416
+ new$1*-2.3891996 same$1*-1.0355993 relative$1*-1.6434218 objects$1*-0.9197934
+ sequence$1*-0.9247059 trans$1*-0.8616248 avoid$1*-1.2196389 control$1*-1.9736255
+ touch$1*-0.8760355];
+
+!!! Class 4: Location and Sensory Flexibilty !!!
+
+%c#4% 
+[primary$1*-0.2736958 change$1*-0.4853059 interupt$1*-0.7217852 initiat$1*-0.5451086
+ engage$1*-0.4641576 approach$1*-0.4305291 response$1*-0.5666941 expect$1*-0.7861311
+ new$1*1.1914483 same$1*2.6021528 relative$1*1.8070090 objects$1*-2.1751973 
+ sequence$1*-1.5645131 trans$1*-1.3925561 avoid$1*1.0511726 control$1*1.7905933
+ touch$1*1.2891306];
+
+!!! Class 5: Low Flexibility !!!
+
+%c#5% 
+[primary$1*3.287572 change$1*1.909830 interupt$1*2.186163 initiat$1*3.623315
+ engage$1*2.843852 approach$1*3.009467 response$1*3.555 expect$1*2.338303 
+ new$1*2.153550 same$1*2.571429 relative$1*2.242481 objects$1*3.511031 
+ sequence$1*2.363483 trans$1*1.614246 avoid$1*1.665687 control$1*2.338303 
+ touch$1*3.409496];
+ANALYSIS:
+TYPE = MIXTURE;
+       !!!STARTS = ; !!! No Starts !!!
+    	 processors = 8;
+MODEL:
+%OVERALL%
+  
+       [c#1*-0.466]; !!! c1 = 6.1%  !!!
+       [c#2* 1.279]; !!! c2 = 35.4% !!! 
+       [c#3* 1.041]; !!! c3 = 27.9% !!!
+       [c#4* 0.739]; !!! c4 = 20.6% !!!
+                     !!! c5 = 9.8%  !!!
+  
+
+!!! Class 1: High Flexibility !!! 
+
+%c#1% 
+[primary$1*-2.325907 change$1*-1.815290 interupt$1*-1.945910 initiat$1*-2.090741
+ engage$1*-1.840434 approach$1*-2.231012 response$1*-2.556366 expect$1*-2.231012
+ new$1*-2.987364 same$1*- 2.428837 relative$1*-2.254058 objects$1*-3.555
+ sequence$1*-2.132267 trans$1*-3.152319 avoid$1*-2.699549 control$1*-2.050519
+ touch$1*-1.774368];
+
+!!! Class 2: Social and Interest Flexibility !!!
+%c#2% 
+[primary$1*-1.0773913 change$1*-1.1039528 interupt$1*-1.5299568 initiat$1*-1.9550845 
+ engage$1*-0.9643905 approach$1*-1.3370233 response$1*-1.5299568 expect$1*-1.9187592
+ new$1*1.1914483 same$1*1.2891306 relative$1*0.8905323 objects$1*1.9367985 
+ sequence$1*2.4838238 trans$1*1.9643226 avoid$1*1.2540491 control$1*3.555
+ touch$1*2.1972246];
+
+!!! Class 3: Environmetal Flexibility !!!
+
+%c#3% 
+[primary$1*3.7489924 change$1*1.2139664 interupt$1*2.4423470 initiat$1*1.1200608
+ engage$1*4.4987991 approach$1*1.4500102 response$1*2.0211513 expect$1*2.7339416
+ new$1*-2.3891996 same$1*-1.0355993 relative$1*-1.6434218 objects$1*-0.9197934
+ sequence$1*-0.9247059 trans$1*-0.8616248 avoid$1*-1.2196389 control$1*-1.9736255
+ touch$1*-0.8760355];
+
+!!! Class 4: Location and Sensory Flexibilty !!!
+
+%c#4% 
+[primary$1*-0.2736958 change$1*-0.4853059 interupt$1*-0.7217852 initiat$1*-0.5451086
+ engage$1*-0.4641576 approach$1*-0.4305291 response$1*-0.5666941 expect$1*-0.7861311
+ new$1*1.1914483 same$1*2.6021528 relative$1*1.8070090 objects$1*-2.1751973 
+ sequence$1*-1.5645131 trans$1*-1.3925561 avoid$1*1.0511726 control$1*1.7905933
+ touch$1*1.2891306];
+
+!!! Class 5: Low Flexibility !!!
+
+%c#5% 
+[primary$1*3.287572 change$1*1.909830 interupt$1*2.186163 initiat$1*3.623315
+ engage$1*2.843852 approach$1*3.009467 response$1*3.555 expect$1*2.338303 
+ new$1*2.153550 same$1*2.571429 relative$1*2.242481 objects$1*3.511031 
+ sequence$1*2.363483 trans$1*1.614246 avoid$1*1.665687 control$1*2.338303 
+ touch$1*3.409496];

@@ -1,0 +1,23 @@
+TITLE:
+6-Class
+DATA:
+FILE = "/Users/agarber/github/simulateLCA/enum/lca_explr_data.dat";
+ 
+VARIABLE:
+NAMES = primary change interupt initiat engage approach response expect new same
+     relative objects sequence trans avoid control touch; 
+ MISSING=.;
+ !!! Split Sample Method (STEP-1): Exploratory Model !!!
+categorical = primary-touch; 
+usevar = primary-touch; 
+classes = c(6); 
+ANALYSIS:
+estimator = mlr; 
+    type = mixture;
+    starts = 500 200; 
+    processors = 10;
+OUTPUT:
+svalues residual tech11 tech14;
+PLOT:
+type = plot3; 
+    series = primary-touch(*);

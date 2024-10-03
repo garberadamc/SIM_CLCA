@@ -1,0 +1,1072 @@
+Mplus VERSION 8.6 (Mac)
+MUTHEN & MUTHEN
+09/16/2024   4:21 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+  LCA Power Simulation: Condition N = 1000
+  MONTECARLO:
+  NAMES = primary change interupt initiat engage approach response expect
+           new same relative objects sequence trans avoid control touch;
+  GENERATE = primary change interupt initiat engage approach response expect
+           new same relative objects sequence trans avoid control touch(1);
+  CATEGORICAL = primary change interupt initiat engage approach response expect
+           new same relative objects sequence trans avoid control touch;
+  GENCLASSES = c(5);
+  CLASSES = c(5);
+  NOBSERVATIONS = 1000;
+  SEED = 08202024;
+  	NREPS = 1000;
+   repsave = all;
+   save = n_1000_lca_rep*.dat;
+   RESULTS = lcaresults1000.csv;
+  MODEL POPULATION:
+  %OVERALL%
+
+         [c#1*-0.466]; !!! c1 = 6.1%  !!!
+         [c#2* 1.279]; !!! c2 = 35.4% !!!
+         [c#3* 1.041]; !!! c3 = 27.9% !!!
+         [c#4* 0.739]; !!! c4 = 20.6% !!!
+                       !!! c5 = 9.8%  !!!
+
+  !!! Class 1: High Flexibility !!!
+
+  %c#1%
+  [primary$1*-2.325907 change$1*-1.815290 interupt$1*-1.945910 initiat$1*-2.090741
+   engage$1*-1.840434 approach$1*-2.231012 response$1*-2.556366 expect$1*-2.231012
+   new$1*-2.987364 same$1*- 2.428837 relative$1*-2.254058 objects$1*-3.555
+   sequence$1*-2.132267 trans$1*-3.152319 avoid$1*-2.699549 control$1*-2.050519
+   touch$1*-1.774368];
+
+  !!! Class 2: Social and Interest Flexibility !!!
+  %c#2%
+  [primary$1*-1.0773913 change$1*-1.1039528 interupt$1*-1.5299568 initiat$1*-1.9550845
+   engage$1*-0.9643905 approach$1*-1.3370233 response$1*-1.5299568 expect$1*-1.9187592
+   new$1*1.1914483 same$1*1.2891306 relative$1*0.8905323 objects$1*1.9367985
+   sequence$1*2.4838238 trans$1*1.9643226 avoid$1*1.2540491 control$1*3.555
+   touch$1*2.1972246];
+
+  !!! Class 3: Environmetal Flexibility !!!
+
+  %c#3%
+  [primary$1*3.7489924 change$1*1.2139664 interupt$1*2.4423470 initiat$1*1.1200608
+   engage$1*4.4987991 approach$1*1.4500102 response$1*2.0211513 expect$1*2.7339416
+   new$1*-2.3891996 same$1*-1.0355993 relative$1*-1.6434218 objects$1*-0.9197934
+   sequence$1*-0.9247059 trans$1*-0.8616248 avoid$1*-1.2196389 control$1*-1.9736255
+   touch$1*-0.8760355];
+
+  !!! Class 4: Location and Sensory Flexibilty !!!
+
+  %c#4%
+  [primary$1*-0.2736958 change$1*-0.4853059 interupt$1*-0.7217852 initiat$1*-0.5451086
+   engage$1*-0.4641576 approach$1*-0.4305291 response$1*-0.5666941 expect$1*-0.7861311
+   new$1*1.1914483 same$1*2.6021528 relative$1*1.8070090 objects$1*-2.1751973
+   sequence$1*-1.5645131 trans$1*-1.3925561 avoid$1*1.0511726 control$1*1.7905933
+   touch$1*1.2891306];
+
+  !!! Class 5: Low Flexibility !!!
+
+  %c#5%
+  [primary$1*3.287572 change$1*1.909830 interupt$1*2.186163 initiat$1*3.623315
+   engage$1*2.843852 approach$1*3.009467 response$1*3.555 expect$1*2.338303
+   new$1*2.153550 same$1*2.571429 relative$1*2.242481 objects$1*3.511031
+   sequence$1*2.363483 trans$1*1.614246 avoid$1*1.665687 control$1*2.338303
+   touch$1*3.409496];
+  ANALYSIS:
+  TYPE = MIXTURE;
+         !!!STARTS = ; !!! No Starts !!!
+      	 processors = 8;
+  MODEL:
+  %OVERALL%
+
+         [c#1*-0.466]; !!! c1 = 6.1%  !!!
+         [c#2* 1.279]; !!! c2 = 35.4% !!!
+         [c#3* 1.041]; !!! c3 = 27.9% !!!
+         [c#4* 0.739]; !!! c4 = 20.6% !!!
+                       !!! c5 = 9.8%  !!!
+
+
+  !!! Class 1: High Flexibility !!!
+
+  %c#1%
+  [primary$1*-2.325907 change$1*-1.815290 interupt$1*-1.945910 initiat$1*-2.090741
+   engage$1*-1.840434 approach$1*-2.231012 response$1*-2.556366 expect$1*-2.231012
+   new$1*-2.987364 same$1*- 2.428837 relative$1*-2.254058 objects$1*-3.555
+   sequence$1*-2.132267 trans$1*-3.152319 avoid$1*-2.699549 control$1*-2.050519
+   touch$1*-1.774368];
+
+  !!! Class 2: Social and Interest Flexibility !!!
+  %c#2%
+  [primary$1*-1.0773913 change$1*-1.1039528 interupt$1*-1.5299568 initiat$1*-1.9550845
+   engage$1*-0.9643905 approach$1*-1.3370233 response$1*-1.5299568 expect$1*-1.9187592
+   new$1*1.1914483 same$1*1.2891306 relative$1*0.8905323 objects$1*1.9367985
+   sequence$1*2.4838238 trans$1*1.9643226 avoid$1*1.2540491 control$1*3.555
+   touch$1*2.1972246];
+
+  !!! Class 3: Environmetal Flexibility !!!
+
+  %c#3%
+  [primary$1*3.7489924 change$1*1.2139664 interupt$1*2.4423470 initiat$1*1.1200608
+   engage$1*4.4987991 approach$1*1.4500102 response$1*2.0211513 expect$1*2.7339416
+   new$1*-2.3891996 same$1*-1.0355993 relative$1*-1.6434218 objects$1*-0.9197934
+   sequence$1*-0.9247059 trans$1*-0.8616248 avoid$1*-1.2196389 control$1*-1.9736255
+   touch$1*-0.8760355];
+
+  !!! Class 4: Location and Sensory Flexibilty !!!
+
+  %c#4%
+  [primary$1*-0.2736958 change$1*-0.4853059 interupt$1*-0.7217852 initiat$1*-0.5451086
+   engage$1*-0.4641576 approach$1*-0.4305291 response$1*-0.5666941 expect$1*-0.7861311
+   new$1*1.1914483 same$1*2.6021528 relative$1*1.8070090 objects$1*-2.1751973
+   sequence$1*-1.5645131 trans$1*-1.3925561 avoid$1*1.0511726 control$1*1.7905933
+   touch$1*1.2891306];
+
+  !!! Class 5: Low Flexibility !!!
+
+  %c#5%
+  [primary$1*3.287572 change$1*1.909830 interupt$1*2.186163 initiat$1*3.623315
+   engage$1*2.843852 approach$1*3.009467 response$1*3.555 expect$1*2.338303
+   new$1*2.153550 same$1*2.571429 relative$1*2.242481 objects$1*3.511031
+   sequence$1*2.363483 trans$1*1.614246 avoid$1*1.665687 control$1*2.338303
+   touch$1*3.409496];
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+LCA Power Simulation: Condition N = 1000
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                        1000
+
+Number of replications
+    Requested                                                 1000
+    Completed                                                 1000
+Value of seed                                              8202024
+
+Number of dependent variables                                   17
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+Number of categorical latent variables                           1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   PRIMARY     CHANGE      INTERUPT    INITIAT     ENGAGE      APPROACH
+   RESPONSE    EXPECT      NEW         SAME        RELATIVE    OBJECTS
+   SEQUENCE    TRANS       AVOID       CONTROL     TOUCH
+
+Categorical latent variables
+   C
+
+
+Estimator                                                      MLR
+Information matrix                                        OBSERVED
+Optimization Specifications for the Quasi-Newton Algorithm for
+Continuous Outcomes
+  Maximum number of iterations                                 100
+  Convergence criterion                                  0.100D-05
+Optimization Specifications for the EM Algorithm
+  Maximum number of iterations                                 500
+  Convergence criteria
+    Loglikelihood change                                 0.100D-06
+    Relative loglikelihood change                        0.100D-06
+    Derivative                                           0.100D-05
+Optimization Specifications for the M step of the EM Algorithm for
+Categorical Latent variables
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+Optimization Specifications for the M step of the EM Algorithm for
+Censored, Binary or Ordered Categorical (Ordinal), Unordered
+Categorical (Nominal) and Count Outcomes
+  Number of M step iterations                                    1
+  M step convergence criterion                           0.100D-05
+  Basis for M step termination                           ITERATION
+  Maximum value for logit thresholds                            15
+  Minimum value for logit thresholds                           -15
+  Minimum expected cell size for chi-square              0.100D-01
+Optimization algorithm                                         EMA
+Link                                                         LOGIT
+
+
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       89
+
+Loglikelihood
+
+    H0 Value
+
+        Mean                             -8701.287
+        Std Dev                             80.728
+        Number of successful computations     1000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.994        -8889.084      -8880.489
+           0.980       0.978        -8867.078      -8869.057
+           0.950       0.953        -8834.076      -8833.010
+           0.900       0.907        -8804.748      -8803.533
+           0.800       0.799        -8769.228      -8770.791
+           0.700       0.695        -8743.621      -8744.008
+           0.500       0.502        -8701.287      -8701.047
+           0.300       0.298        -8658.954      -8659.226
+           0.200       0.191        -8633.347      -8637.023
+           0.100       0.092        -8597.826      -8601.009
+           0.050       0.053        -8568.498      -8566.367
+           0.020       0.025        -8535.497      -8529.898
+           0.010       0.012        -8513.490      -8510.128
+
+Information Criteria
+
+    Akaike (AIC)
+
+        Mean                             17580.574
+        Std Dev                            161.456
+        Number of successful computations     1000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.988        17204.980      17194.533
+           0.980       0.975        17248.993      17234.023
+           0.950       0.947        17314.996      17310.477
+           0.900       0.908        17373.653      17378.305
+           0.800       0.809        17444.693      17449.899
+           0.700       0.702        17495.907      17496.127
+           0.500       0.498        17580.574      17579.611
+           0.300       0.305        17665.242      17665.618
+           0.200       0.201        17716.455      17716.566
+           0.100       0.093        17787.496      17783.792
+           0.050       0.047        17846.153      17840.489
+           0.020       0.022        17912.156      17915.676
+           0.010       0.006        17956.168      17937.007
+
+    Bayesian (BIC)
+
+        Mean                             18017.365
+        Std Dev                            161.456
+        Number of successful computations     1000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.988        17641.771      17631.323
+           0.980       0.975        17685.783      17670.813
+           0.950       0.947        17751.786      17747.267
+           0.900       0.908        17810.443      17815.096
+           0.800       0.809        17881.484      17886.689
+           0.700       0.702        17932.697      17932.917
+           0.500       0.498        18017.365      18016.401
+           0.300       0.305        18102.032      18102.409
+           0.200       0.201        18153.246      18153.356
+           0.100       0.093        18224.286      18220.583
+           0.050       0.047        18282.943      18277.279
+           0.020       0.022        18348.946      18352.466
+           0.010       0.006        18392.959      18373.798
+
+    Sample-Size Adjusted BIC (n* = (n + 2) / 24)
+
+        Mean                             17734.696
+        Std Dev                            161.456
+        Number of successful computations     1000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.988        17359.102      17348.654
+           0.980       0.975        17403.114      17388.144
+           0.950       0.947        17469.117      17464.598
+           0.900       0.908        17527.774      17532.427
+           0.800       0.809        17598.815      17604.020
+           0.700       0.702        17650.028      17650.248
+           0.500       0.498        17734.696      17733.732
+           0.300       0.305        17819.363      17819.740
+           0.200       0.201        17870.577      17870.687
+           0.100       0.093        17941.617      17937.914
+           0.050       0.047        18000.274      17994.610
+           0.020       0.022        18066.277      18069.797
+           0.010       0.006        18110.290      18091.129
+
+Chi-Square Test of Model Fit for the Binary and Ordered Categorical
+(Ordinal) Outcomes
+
+    Pearson Chi-Square
+
+        Mean                             11292.649
+        Std Dev                            666.227
+        Degrees of freedom                  130852
+        Number of successful computations     1000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000       129664.852       9859.514
+           0.980       0.000       129803.510       9961.553
+           0.950       0.000       130011.681      10204.322
+           0.900       0.000       130196.826      10430.573
+           0.800       0.000       130421.258      10720.591
+           0.700       0.000       130583.250      10929.330
+           0.500       0.000       130851.333      11285.979
+           0.300       0.000       131119.784      11632.204
+           0.200       0.000       131282.353      11860.580
+           0.100       0.000       131508.030      12107.913
+           0.050       0.000       131694.593      12410.402
+           0.020       0.000       131904.781      12662.369
+           0.010       0.000       132045.031      12847.081
+
+    Likelihood Ratio Chi-Square
+
+        Mean                              2945.632
+        Std Dev                             94.820
+        Degrees of freedom                  130852
+        Number of successful computations     1000
+
+             Proportions                   Percentiles
+        Expected    Observed         Expected       Observed
+           0.990       0.000       129664.852       2729.614
+           0.980       0.000       129803.510       2742.927
+           0.950       0.000       130011.681       2792.391
+           0.900       0.000       130196.826       2825.943
+           0.800       0.000       130421.258       2863.896
+           0.700       0.000       130583.250       2895.038
+           0.500       0.000       130851.333       2945.181
+           0.300       0.000       131119.784       2996.359
+           0.200       0.000       131282.353       3022.156
+           0.100       0.000       131508.030       3068.525
+           0.050       0.000       131694.593       3102.415
+           0.020       0.000       131904.781       3140.646
+           0.010       0.000       132045.031       3170.318
+
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THE ESTIMATED MODEL
+
+    Latent
+   Classes
+
+       1         61.82026          0.06182
+       2        354.62611          0.35463
+       3        279.71978          0.27972
+       4        205.82707          0.20583
+       5         98.00678          0.09801
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON ESTIMATED POSTERIOR PROBABILITIES
+
+    Latent
+   Classes
+
+       1         61.82026          0.06182
+       2        354.62611          0.35463
+       3        279.71978          0.27972
+       4        205.82707          0.20583
+       5         98.00678          0.09801
+
+
+FINAL CLASS COUNTS AND PROPORTIONS FOR THE LATENT CLASSES
+BASED ON THEIR MOST LIKELY LATENT CLASS MEMBERSHIP
+
+Class Counts and Proportions
+
+    Latent
+   Classes
+
+       1               62          0.06186
+       2              356          0.35579
+       3              280          0.27990
+       4              204          0.20417
+       5               98          0.09827
+
+
+CLASSIFICATION QUALITY
+
+     Entropy                         0.946
+
+
+Average Latent Class Probabilities for Most Likely Latent Class Membership (Row)
+by Latent Class (Column)
+
+           1        2        3        4        5
+
+    1   0.987    0.001    0.002    0.010    0.000
+    2   0.000    0.968    0.000    0.031    0.001
+    3   0.001    0.000    0.993    0.004    0.002
+    4   0.003    0.048    0.004    0.944    0.002
+    5   0.000    0.005    0.007    0.004    0.984
+
+
+Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+           1        2        3        4        5
+
+    1   0.989    0.001    0.006    0.005    0.000
+    2   0.000    0.964    0.000    0.035    0.002
+    3   0.001    0.000    0.997    0.001    0.001
+    4   0.005    0.069    0.002    0.922    0.002
+    5   0.000    0.003    0.005    0.002    0.989
+
+
+Logits for the Classification Probabilities for the Most Likely Latent Class Membership (Column)
+by Latent Class (Row)
+
+              1        2        3        4        5
+
+    1     13.804    6.384    8.614    8.509    0.000
+    2     -3.092    6.438   -2.448    3.113    0.000
+    3      0.033   -2.164    7.133    0.491    0.000
+    4      0.791    3.428   -0.008    6.023    0.000
+    5    -13.805   -5.834   -5.245   -6.024    0.000
+
+
+MODEL RESULTS
+
+                              ESTIMATES              S. E.     M. S. E.  95%  % Sig
+                 Population   Average   Std. Dev.   Average             Cover Coeff
+
+Latent Class 1
+
+ Thresholds
+  PRIMARY$1          -2.326    -2.5101     1.1870     0.6182     1.4414 0.961 0.997
+  CHANGE$1           -1.815    -1.8584     0.4151     0.3988     0.1740 0.968 1.000
+  INTERUPT$1         -1.946    -2.0339     0.7360     0.4239     0.5489 0.961 0.999
+  INITIAT$1          -2.091    -2.1746     0.4814     0.4563     0.2385 0.964 1.000
+  ENGAGE$1           -1.840    -1.9312     0.4493     0.4237     0.2099 0.969 0.997
+  APPROACH$1         -2.231    -2.3644     0.9465     0.4856     0.9127 0.963 1.000
+  RESPONSE$1         -2.556    -2.8374     1.6424     0.5613     2.7739 0.945 0.996
+  EXPECT$1           -2.231    -2.4022     1.0893     0.4853     1.2146 0.966 0.999
+  NEW$1              -2.987    -3.9003     3.1487     0.6709    10.7381 0.885 0.994
+  SAME$1             -2.429    -2.8037     1.8669     0.5643     3.6222 0.946 0.999
+  RELATIVE$1         -2.254    -2.3936     0.8574     0.5176     0.7539 0.972 0.996
+  OBJECTS$1          -3.555    -5.6308     4.5558     1.0073    25.0435 0.774 0.990
+  SEQUENCE$1         -2.132    -2.2284     0.6139     0.4576     0.3858 0.970 1.000
+  TRANS$1            -3.152    -4.3476     3.5156     0.6931    13.7758 0.864 0.991
+  AVOID$1            -2.700    -3.2119     2.3195     0.6477     5.6372 0.935 0.993
+  CONTROL$1          -2.051    -2.1979     0.9449     0.4777     0.9138 0.959 0.998
+  TOUCH$1            -1.774    -1.8326     0.5854     0.4028     0.3457 0.960 0.998
+
+Latent Class 2
+
+ Thresholds
+  PRIMARY$1          -1.077    -1.0861     0.1252     0.1280     0.0157 0.952 1.000
+  CHANGE$1           -1.104    -1.1048     0.1300     0.1281     0.0169 0.946 1.000
+  INTERUPT$1         -1.530    -1.5347     0.1477     0.1460     0.0218 0.942 1.000
+  INITIAT$1          -1.955    -1.9716     0.1718     0.1737     0.0298 0.956 1.000
+  ENGAGE$1           -0.964    -0.9704     0.1214     0.1239     0.0148 0.951 1.000
+  APPROACH$1         -1.337    -1.3431     0.1425     0.1377     0.0203 0.940 1.000
+  RESPONSE$1         -1.530    -1.5378     0.1506     0.1467     0.0227 0.949 1.000
+  EXPECT$1           -1.919    -1.9275     0.1728     0.1693     0.0299 0.951 1.000
+  NEW$1               1.191     1.1893     0.1313     0.1300     0.0172 0.950 1.000
+  SAME$1              1.289     1.2937     0.1358     0.1330     0.0185 0.931 1.000
+  RELATIVE$1          0.891     0.8923     0.1244     0.1208     0.0155 0.940 1.000
+  OBJECTS$1           1.937     1.9566     0.1922     0.1976     0.0373 0.965 1.000
+  SEQUENCE$1          2.484     2.5169     0.2537     0.2535     0.0654 0.960 1.000
+  TRANS$1             1.964     1.9842     0.1833     0.1893     0.0340 0.958 1.000
+  AVOID$1             1.254     1.2526     0.1418     0.1326     0.0201 0.937 1.000
+  CONTROL$1           3.555     3.6282     0.3705     0.3716     0.1425 0.968 1.000
+  TOUCH$1             2.197     2.2149     0.1935     0.1879     0.0377 0.948 1.000
+
+Latent Class 3
+
+ Thresholds
+  PRIMARY$1           3.749     3.8849     0.9157     0.4449     0.8561 0.966 0.999
+  CHANGE$1            1.214     1.2234     0.1479     0.1446     0.0219 0.950 1.000
+  INTERUPT$1          2.442     2.4723     0.2354     0.2295     0.0563 0.951 1.000
+  INITIAT$1           1.120     1.1208     0.1364     0.1405     0.0186 0.960 1.000
+  ENGAGE$1            4.499     5.1650     2.4218     0.6478     6.3031 0.911 0.996
+  APPROACH$1          1.450     1.4624     0.1625     0.1553     0.0265 0.944 1.000
+  RESPONSE$1          2.021     2.0441     0.1900     0.1915     0.0366 0.955 1.000
+  EXPECT$1            2.734     2.7716     0.2747     0.2634     0.0768 0.952 1.000
+  NEW$1              -2.389    -2.4033     0.2319     0.2247     0.0539 0.946 1.000
+  SAME$1             -1.036    -1.0291     0.1380     0.1382     0.0191 0.952 1.000
+  RELATIVE$1         -1.643    -1.6486     0.1629     0.1665     0.0265 0.959 1.000
+  OBJECTS$1          -0.920    -0.9224     0.1364     0.1342     0.0186 0.947 1.000
+  SEQUENCE$1         -0.925    -0.9179     0.1369     0.1340     0.0188 0.950 1.000
+  TRANS$1            -0.862    -0.8722     0.1277     0.1326     0.0164 0.956 1.000
+  AVOID$1            -1.220    -1.2193     0.1429     0.1448     0.0204 0.958 1.000
+  CONTROL$1          -1.974    -1.9830     0.1964     0.1890     0.0386 0.951 1.000
+  TOUCH$1            -0.876    -0.8868     0.1326     0.1335     0.0177 0.958 1.000
+
+Latent Class 4
+
+ Thresholds
+  PRIMARY$1          -0.274    -0.2738     0.1494     0.1509     0.0223 0.960 0.444
+  CHANGE$1           -0.485    -0.4836     0.1540     0.1534     0.0237 0.947 0.885
+  INTERUPT$1         -0.722    -0.7283     0.1614     0.1592     0.0261 0.947 0.998
+  INITIAT$1          -0.545    -0.5449     0.1496     0.1548     0.0224 0.966 0.956
+  ENGAGE$1           -0.464    -0.4676     0.1620     0.1536     0.0262 0.933 0.869
+  APPROACH$1         -0.431    -0.4321     0.1451     0.1527     0.0210 0.959 0.824
+  RESPONSE$1         -0.567    -0.5733     0.1613     0.1554     0.0260 0.939 0.960
+  EXPECT$1           -0.786    -0.7921     0.1544     0.1609     0.0239 0.959 0.999
+  NEW$1               1.191     1.2059     0.1975     0.1802     0.0392 0.936 1.000
+  SAME$1              2.602     2.6508     0.3378     0.3313     0.1164 0.964 1.000
+  RELATIVE$1          1.807     1.8224     0.2305     0.2258     0.0533 0.955 1.000
+  OBJECTS$1          -2.175    -2.2280     0.3448     0.3297     0.1216 0.958 0.999
+  SEQUENCE$1         -1.565    -1.5855     0.2417     0.2407     0.0588 0.964 1.000
+  TRANS$1            -1.393    -1.4020     0.2237     0.2129     0.0501 0.943 1.000
+  AVOID$1             1.051     1.0597     0.1720     0.1721     0.0296 0.953 1.000
+  CONTROL$1           1.791     1.8122     0.2174     0.2161     0.0477 0.953 1.000
+  TOUCH$1             1.289     1.2979     0.1870     0.1818     0.0350 0.950 1.000
+
+Latent Class 5
+
+ Thresholds
+  PRIMARY$1           3.288     3.8639     2.2921     0.6429     5.5804 0.925 0.996
+  CHANGE$1            1.910     1.9455     0.3310     0.3249     0.1107 0.962 1.000
+  INTERUPT$1          2.186     2.2373     0.3815     0.3685     0.1480 0.964 1.000
+  INITIAT$1           3.623     5.0958     3.7900     0.7213    16.5182 0.838 0.993
+  ENGAGE$1            2.844     3.0226     1.1268     0.5054     1.3003 0.960 0.999
+  APPROACH$1          3.009     3.3886     1.8310     0.5722     3.4930 0.944 0.996
+  RESPONSE$1          3.555     4.4884     3.0833     0.9548    10.3687 0.889 0.986
+  EXPECT$1            2.338     2.4203     0.5735     0.3989     0.3353 0.966 1.000
+  NEW$1               2.154     2.1840     0.5372     0.3606     0.2893 0.967 1.000
+  SAME$1              2.571     2.6408     0.4429     0.4429     0.2008 0.967 0.999
+  RELATIVE$1          2.242     2.3025     0.3968     0.3809     0.1609 0.957 1.000
+  OBJECTS$1           3.511     4.7395     3.5078     0.7003    13.8013 0.861 0.991
+  SEQUENCE$1          2.363     2.4154     0.4136     0.4035     0.1736 0.965 1.000
+  TRANS$1             1.614     1.6475     0.3059     0.2911     0.0946 0.955 1.000
+  AVOID$1             1.666     1.6988     0.3009     0.2944     0.0915 0.964 1.000
+  CONTROL$1           2.338     2.4014     0.4097     0.3971     0.1717 0.965 1.000
+  TOUCH$1             3.409     4.3900     3.1161     0.7587    10.6617 0.887 0.993
+
+Categorical Latent Variables
+
+ Means
+  C#1                -0.466    -0.4638     0.1653     0.1667     0.0273 0.956 0.805
+  C#2                 1.279     1.2899     0.1221     0.1182     0.0150 0.936 1.000
+  C#3                 1.041     1.0525     0.1229     0.1201     0.0152 0.944 1.000
+  C#4                 0.739     0.7444     0.1340     0.1309     0.0180 0.955 1.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Average Condition Number for the Information Matrix      0.198E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS 1
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS 2
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS 3
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS 4
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS 5
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS INDICATOR MODEL PART
+
+
+           TAU(U) FOR LATENT CLASS 1
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                    1             2             3             4             5
+
+
+           TAU(U) FOR LATENT CLASS 1
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                    6             7             8             9            10
+
+
+           TAU(U) FOR LATENT CLASS 1
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                   11            12            13            14            15
+
+
+           TAU(U) FOR LATENT CLASS 1
+              CONTROL$      TOUCH$1
+              ________      ________
+                   16            17
+
+
+           TAU(U) FOR LATENT CLASS 2
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                   18            19            20            21            22
+
+
+           TAU(U) FOR LATENT CLASS 2
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                   23            24            25            26            27
+
+
+           TAU(U) FOR LATENT CLASS 2
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                   28            29            30            31            32
+
+
+           TAU(U) FOR LATENT CLASS 2
+              CONTROL$      TOUCH$1
+              ________      ________
+                   33            34
+
+
+           TAU(U) FOR LATENT CLASS 3
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                   35            36            37            38            39
+
+
+           TAU(U) FOR LATENT CLASS 3
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                   40            41            42            43            44
+
+
+           TAU(U) FOR LATENT CLASS 3
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                   45            46            47            48            49
+
+
+           TAU(U) FOR LATENT CLASS 3
+              CONTROL$      TOUCH$1
+              ________      ________
+                   50            51
+
+
+           TAU(U) FOR LATENT CLASS 4
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                   52            53            54            55            56
+
+
+           TAU(U) FOR LATENT CLASS 4
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                   57            58            59            60            61
+
+
+           TAU(U) FOR LATENT CLASS 4
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                   62            63            64            65            66
+
+
+           TAU(U) FOR LATENT CLASS 4
+              CONTROL$      TOUCH$1
+              ________      ________
+                   67            68
+
+
+           TAU(U) FOR LATENT CLASS 5
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                   69            70            71            72            73
+
+
+           TAU(U) FOR LATENT CLASS 5
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                   74            75            76            77            78
+
+
+           TAU(U) FOR LATENT CLASS 5
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                   79            80            81            82            83
+
+
+           TAU(U) FOR LATENT CLASS 5
+              CONTROL$      TOUCH$1
+              ________      ________
+                   84            85
+
+
+     PARAMETER SPECIFICATION FOR LATENT CLASS REGRESSION MODEL PART
+
+
+           ALPHA(C)
+              C#1           C#2           C#3           C#4           C#5
+              ________      ________      ________      ________      ________
+                   86            87            88            89             0
+
+
+     STARTING VALUES FOR LATENT CLASS 1
+
+
+     STARTING VALUES FOR LATENT CLASS 2
+
+
+     STARTING VALUES FOR LATENT CLASS 3
+
+
+     STARTING VALUES FOR LATENT CLASS 4
+
+
+     STARTING VALUES FOR LATENT CLASS 5
+
+
+     STARTING VALUES FOR LATENT CLASS INDICATOR MODEL PART
+
+
+           TAU(U) FOR LATENT CLASS 1
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+               -2.326        -1.815        -1.946        -2.091        -1.840
+
+
+           TAU(U) FOR LATENT CLASS 1
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+               -2.231        -2.556        -2.231        -2.987        -2.429
+
+
+           TAU(U) FOR LATENT CLASS 1
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+               -2.254        -3.555        -2.132        -3.152        -2.700
+
+
+           TAU(U) FOR LATENT CLASS 1
+              CONTROL$      TOUCH$1
+              ________      ________
+               -2.051        -1.774
+
+
+           TAU(U) FOR LATENT CLASS 2
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+               -1.077        -1.104        -1.530        -1.955        -0.964
+
+
+           TAU(U) FOR LATENT CLASS 2
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+               -1.337        -1.530        -1.919         1.191         1.289
+
+
+           TAU(U) FOR LATENT CLASS 2
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                0.891         1.937         2.484         1.964         1.254
+
+
+           TAU(U) FOR LATENT CLASS 2
+              CONTROL$      TOUCH$1
+              ________      ________
+                3.555         2.197
+
+
+           TAU(U) FOR LATENT CLASS 3
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                3.749         1.214         2.442         1.120         4.499
+
+
+           TAU(U) FOR LATENT CLASS 3
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                1.450         2.021         2.734        -2.389        -1.036
+
+
+           TAU(U) FOR LATENT CLASS 3
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+               -1.643        -0.920        -0.925        -0.862        -1.220
+
+
+           TAU(U) FOR LATENT CLASS 3
+              CONTROL$      TOUCH$1
+              ________      ________
+               -1.974        -0.876
+
+
+           TAU(U) FOR LATENT CLASS 4
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+               -0.274        -0.485        -0.722        -0.545        -0.464
+
+
+           TAU(U) FOR LATENT CLASS 4
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+               -0.431        -0.567        -0.786         1.191         2.602
+
+
+           TAU(U) FOR LATENT CLASS 4
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                1.807        -2.175        -1.565        -1.393         1.051
+
+
+           TAU(U) FOR LATENT CLASS 4
+              CONTROL$      TOUCH$1
+              ________      ________
+                1.791         1.289
+
+
+           TAU(U) FOR LATENT CLASS 5
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                3.288         1.910         2.186         3.623         2.844
+
+
+           TAU(U) FOR LATENT CLASS 5
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                3.009         3.555         2.338         2.154         2.571
+
+
+           TAU(U) FOR LATENT CLASS 5
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                2.242         3.511         2.363         1.614         1.666
+
+
+           TAU(U) FOR LATENT CLASS 5
+              CONTROL$      TOUCH$1
+              ________      ________
+                2.338         3.409
+
+
+     STARTING VALUES FOR LATENT CLASS REGRESSION MODEL PART
+
+
+           ALPHA(C)
+              C#1           C#2           C#3           C#4           C#5
+              ________      ________      ________      ________      ________
+               -0.466         1.279         1.041         0.739         0.000
+
+
+     POPULATION VALUES FOR LATENT CLASS 1
+
+
+     POPULATION VALUES FOR LATENT CLASS 2
+
+
+     POPULATION VALUES FOR LATENT CLASS 3
+
+
+     POPULATION VALUES FOR LATENT CLASS 4
+
+
+     POPULATION VALUES FOR LATENT CLASS 5
+
+
+     POPULATION VALUES FOR LATENT CLASS INDICATOR MODEL PART
+
+
+           TAU(U) FOR LATENT CLASS 1
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+               -2.326        -1.815        -1.946        -2.091        -1.840
+
+
+           TAU(U) FOR LATENT CLASS 1
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+               -2.231        -2.556        -2.231        -2.987        -2.429
+
+
+           TAU(U) FOR LATENT CLASS 1
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+               -2.254        -3.555        -2.132        -3.152        -2.700
+
+
+           TAU(U) FOR LATENT CLASS 1
+              CONTROL$      TOUCH$1
+              ________      ________
+               -2.051        -1.774
+
+
+           TAU(U) FOR LATENT CLASS 2
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+               -1.077        -1.104        -1.530        -1.955        -0.964
+
+
+           TAU(U) FOR LATENT CLASS 2
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+               -1.337        -1.530        -1.919         1.191         1.289
+
+
+           TAU(U) FOR LATENT CLASS 2
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                0.891         1.937         2.484         1.964         1.254
+
+
+           TAU(U) FOR LATENT CLASS 2
+              CONTROL$      TOUCH$1
+              ________      ________
+                3.555         2.197
+
+
+           TAU(U) FOR LATENT CLASS 3
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                3.749         1.214         2.442         1.120         4.499
+
+
+           TAU(U) FOR LATENT CLASS 3
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                1.450         2.021         2.734        -2.389        -1.036
+
+
+           TAU(U) FOR LATENT CLASS 3
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+               -1.643        -0.920        -0.925        -0.862        -1.220
+
+
+           TAU(U) FOR LATENT CLASS 3
+              CONTROL$      TOUCH$1
+              ________      ________
+               -1.974        -0.876
+
+
+           TAU(U) FOR LATENT CLASS 4
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+               -0.274        -0.485        -0.722        -0.545        -0.464
+
+
+           TAU(U) FOR LATENT CLASS 4
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+               -0.431        -0.567        -0.786         1.191         2.602
+
+
+           TAU(U) FOR LATENT CLASS 4
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                1.807        -2.175        -1.565        -1.393         1.051
+
+
+           TAU(U) FOR LATENT CLASS 4
+              CONTROL$      TOUCH$1
+              ________      ________
+                1.791         1.289
+
+
+           TAU(U) FOR LATENT CLASS 5
+              PRIMARY$      CHANGE$1      INTERUPT      INITIAT$      ENGAGE$1
+              ________      ________      ________      ________      ________
+                3.288         1.910         2.186         3.623         2.844
+
+
+           TAU(U) FOR LATENT CLASS 5
+              APPROACH      RESPONSE      EXPECT$1      NEW$1         SAME$1
+              ________      ________      ________      ________      ________
+                3.009         3.555         2.338         2.154         2.571
+
+
+           TAU(U) FOR LATENT CLASS 5
+              RELATIVE      OBJECTS$      SEQUENCE      TRANS$1       AVOID$1
+              ________      ________      ________      ________      ________
+                2.242         3.511         2.363         1.614         1.666
+
+
+           TAU(U) FOR LATENT CLASS 5
+              CONTROL$      TOUCH$1
+              ________      ________
+                2.338         3.409
+
+
+     POPULATION VALUES FOR LATENT CLASS REGRESSION MODEL PART
+
+
+           ALPHA(C)
+              C#1           C#2           C#3           C#4           C#5
+              ________      ________      ________      ________      ________
+               -0.466         1.279         1.041         0.739         0.000
+
+
+SAVEDATA INFORMATION
+
+  Order of variables
+
+    PRIMARY
+    CHANGE
+    INTERUPT
+    INITIAT
+    ENGAGE
+    APPROACH
+    RESPONSE
+    EXPECT
+    NEW
+    SAME
+    RELATIVE
+    OBJECTS
+    SEQUENCE
+    TRANS
+    AVOID
+    CONTROL
+    TOUCH
+    C
+
+  Save file
+    n_1000_lca_rep*.dat
+
+  Save file format           Free
+  Save file record length    10000
+
+
+RESULTS SAVING INFORMATION
+
+  Order of data
+
+    Replication number
+    Parameter estimates
+     (saved in order shown in Technical 1 output)
+    Standard errors
+     (saved in order shown in Technical 1 output)
+    Number of Free Parameters
+    H0 Loglikelihood
+    Akaike (AIC)
+    Bayesian (BIC)
+    Sample-Size Adjusted BIC
+    Pearson Chi-Square : Value
+    Pearson Chi-Square : Degrees of Freedom
+    Pearson Chi-Square : P-Value
+    Likelihood Chi-Square : Value
+    Likelihood Chi-Square : Degrees of Freedom
+    Likelihood Chi-Square : P-Value
+
+  Save file
+    lcaresults1000.csv
+
+  Save file format           Free
+
+
+     Beginning Time:  16:21:13
+        Ending Time:  16:23:53
+       Elapsed Time:  00:02:40
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2021 Muthen & Muthen

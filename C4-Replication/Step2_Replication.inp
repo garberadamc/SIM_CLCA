@@ -1,0 +1,230 @@
+TITLE:
+Step 2 - Replication
+DATA:
+FILE = "/Users/agarber/github/SIM_CLCA/C4-Replication/Step2_Replication.dat";
+ 
+VARIABLE:
+NAMES = primary change interupt initiat engage approach response expect new same
+     relative objects sequence trans avoid control touch sample; 
+ MISSING=.;
+ categorical = primary-touch; 
+    usevar = primary-touch;
+  
+    knownclass = CG (sample=1 sample=2); !!! LABEL SAMPLES !!!
+    classes = CG(2) C(5);                !!! CG is KNOWN CLASS !!!
+   
+ANALYSIS:
+estimator = mlr; 
+    type = mixture;
+    starts = 500 200;
+    !STSEED = ; !!! USE SEED TO REPLICATE THESIS RESULTS !!!
+   
+MODEL:
+%OVERALL%
+     
+     !!! INITIAL SAMPLE (SAMPLE 1) !!! INITIAL SAMPLE (SAMPLE 1) !!!
+  
+     %CG#1.C#1% 
+
+     [ primary$1*-0.21760  ];             
+     [ change$1*-0.45914   ];            
+     [ interupt$1*-0.64034 ];              
+     [ initiat$1*-0.46809  ];             
+     [ engage$1*-0.33510   ];            
+     [ approach$1*-0.42163 ];              
+     [ response$1*-0.58459 ];              
+     [ expect$1*-0.60368   ];            
+     [ new$1*1.17714       ];        
+     [ same$1*2.92160      ];         
+     [ relative$1*1.86782  ];             
+     [ objects$1*-1.97843  ];             
+     [ sequence$1*-1.40431 ];              
+     [ trans$1*-1.31741    ];           
+     [ avoid$1*0.99669     ];          
+     [ control$1*1.69313   ];            
+     [ touch$1*1.24603     ];          
+
+     %CG#1.C#2%
+
+     [ primary$1*3.45112   ];        
+     [ change$1*2.10148    ];       
+     [ interupt$1*2.33173  ];         
+     [ initiat$1*4.67053   ];        
+     [ engage$1*2.61317    ];       
+     [ approach$1*3.00689  ];         
+     [ response$1*3.01867  ];         
+     [ expect$1*2.47608    ];       
+     [ new$1*2.13464       ];    
+     [ same$1*2.61928      ];     
+     [ relative$1*2.46710  ];         
+     [ objects$1*3.49010   ];        
+     [ sequence$1*2.16238  ];         
+     [ trans$1*1.76331     ];      
+     [ avoid$1*1.62916     ];      
+     [ control$1*2.77768   ];        
+     [ touch$1*2.98188     ];      
+
+     %CG#1.C#3%
+
+     [ primary$1*-1.15805  ];       
+     [ change$1*-1.05640   ];      
+     [ interupt$1*-1.47052 ];        
+     [ initiat$1*-1.88494  ];       
+     [ engage$1*-0.85925   ];      
+     [ approach$1*-1.29676 ];        
+     [ response$1*-1.60551 ];        
+     [ expect$1*-1.84879   ];      
+     [ new$1*1.21384       ];  
+     [ same$1*1.25810      ];   
+     [ relative$1*1.00299  ];       
+     [ objects$1*2.02420   ];      
+     [ sequence$1*2.49353  ];       
+     [ trans$1*1.91476     ];    
+     [ avoid$1*1.22229     ];    
+     [ control$1*3.67528   ];      
+     [ touch$1*2.02070     ];    
+
+     %CG#1.C#4%
+
+     [ primary$1*-2.45913  ];           
+     [ change$1*-2.07089   ];          
+     [ interupt$1*-2.29483 ];            
+     [ initiat$1*-2.28241  ];           
+     [ engage$1*-1.87192   ];          
+     [ approach$1*-2.25327 ];            
+     [ response$1*-2.27708 ];            
+     [ expect$1*-2.29726   ];          
+     [ new$1*-2.86563      ];       
+     [ same$1*-2.02751     ];        
+     [ relative$1*-2.09303 ];            
+     [ objects$1*-3.25774  ];           
+     [ sequence$1*-2.18406 ];            
+     [ trans$1*-2.90318    ];         
+     [ avoid$1*-2.16937    ];         
+     [ control$1*-1.95077  ];           
+     [ touch$1*-1.64226    ];         
+
+     %CG#1.C#5%
+
+     [ primary$1*3.92177   ];     
+     [ change$1*1.18687    ];    
+     [ interupt$1*2.44270  ];      
+     [ initiat$1*1.17768   ];     
+     [ engage$1*4.46855    ];    
+     [ approach$1*1.51338  ];      
+     [ response$1*2.11385  ];      
+     [ expect$1*2.56064    ];    
+     [ new$1*-2.43669      ];  
+     [ same$1*-1.04154     ];   
+     [ relative$1*-1.78324 ];       
+     [ objects$1*-1.14240  ];      
+     [ sequence$1*-0.84974 ];       
+     [ trans$1*-0.89213    ];    
+     [ avoid$1*-1.11250    ];    
+     [ control$1*-1.78770  ];      
+     [ touch$1*-0.87239    ]; 
+  
+     !!! REPLICATION SAMPLE (SAMPLE 2) !!! REPLICATION SAMPLE (SAMPLE 2) !!!
+  
+     %CG#2.C#1% 
+
+     [ primary$1*-0.21760  ];            
+     [ change$1*-0.45914   ];           
+     [ interupt$1*-0.64034 ];             
+     [ initiat$1*-0.46809  ];            
+     [ engage$1*-0.33510   ];           
+     [ approach$1*-0.42163 ];             
+     [ response$1*-0.58459 ];             
+     [ expect$1*-0.60368   ];           
+     [ new$1*1.17714       ];       
+     [ same$1*2.92160      ];         
+     [ relative$1*1.86782  ];             
+     [ objects$1*-1.97843  ];             
+     [ sequence$1*-1.40431 ];              
+     [ trans$1*-1.31741    ];           
+     [ avoid$1*0.99669     ];          
+     [ control$1*1.69313   ];            
+     [ touch$1*1.24603     ];          
+
+     %CG#2.C#2%
+
+     [ primary$1*3.45112   ];        
+     [ change$1*2.10148    ];       
+     [ interupt$1*2.33173  ];         
+     [ initiat$1*4.67053   ];        
+     [ engage$1*2.61317    ];       
+     [ approach$1*3.00689  ];         
+     [ response$1*3.01867  ];         
+     [ expect$1*2.47608    ];       
+     [ new$1*2.13464       ];    
+     [ same$1*2.61928      ];     
+     [ relative$1*2.46710  ];         
+     [ objects$1*3.49010   ];        
+     [ sequence$1*2.16238  ];         
+     [ trans$1*1.76331     ];      
+     [ avoid$1*1.62916     ];      
+     [ control$1*2.77768   ];        
+     [ touch$1*2.98188     ];      
+
+     %CG#2.C#3%
+
+     [ primary$1*-1.15805  ];       
+     [ change$1*-1.05640   ];      
+     [ interupt$1*-1.47052 ];        
+     [ initiat$1*-1.88494  ];       
+     [ engage$1*-0.85925   ];      
+     [ approach$1*-1.29676 ];        
+     [ response$1*-1.60551 ];        
+     [ expect$1*-1.84879   ];      
+     [ new$1*1.21384       ];  
+     [ same$1*1.25810      ];   
+     [ relative$1*1.00299  ];       
+     [ objects$1*2.02420   ];      
+     [ sequence$1*2.49353  ];       
+     [ trans$1*1.91476     ];    
+     [ avoid$1*1.22229     ];    
+     [ control$1*3.67528   ];      
+     [ touch$1*2.02070     ];    
+
+     %CG#2.C#4%
+
+     [ primary$1*-2.45913  ];       
+     [ change$1*-2.07089   ];      
+     [ interupt$1*-2.29483 ];        
+     [ initiat$1*-2.28241  ];       
+     [ engage$1*-1.87192   ];      
+     [ approach$1*-2.25327 ];        
+     [ response$1*-2.27708 ];        
+     [ expect$1*-2.29726   ];      
+     [ new$1*-2.86563      ];   
+     [ same$1*-2.02751     ];    
+     [ relative$1*-2.09303 ];        
+     [ objects$1*-3.25774  ];       
+     [ sequence$1*-2.18406 ];        
+     [ trans$1*-2.90318    ];     
+     [ avoid$1*-2.16937    ];     
+     [ control$1*-1.95077  ];       
+     [ touch$1*-1.64226    ];     
+
+     %CG#2.C#5%
+
+     [ primary$1*3.92177   ];     
+     [ change$1*1.18687    ];    
+     [ interupt$1*2.44270  ];      
+     [ initiat$1*1.17768   ];     
+     [ engage$1*4.46855    ];    
+     [ approach$1*1.51338  ];      
+     [ response$1*2.11385  ];      
+     [ expect$1*2.56064    ];    
+     [ new$1*-2.43669      ];  
+     [ same$1*-1.04154     ];   
+     [ relative$1*-1.78324 ];       
+     [ objects$1*-1.14240  ];      
+     [ sequence$1*-0.84974 ];       
+     [ trans$1*-0.89213    ];    
+     [ avoid$1*-1.11250    ];    
+     [ control$1*-1.78770  ];      
+     [ touch$1*-0.87239    ];   
+PLOT:
+type = plot3; 
+          series = primary-touch(*);

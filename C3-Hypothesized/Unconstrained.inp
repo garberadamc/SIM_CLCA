@@ -1,0 +1,29 @@
+TITLE:
+Unconstrained Model
+DATA:
+FILE = "/Users/agarber/github/SIM_CLCA/C3-Hypothesized/Unconstrained.dat";
+ 
+VARIABLE:
+NAMES = primary change interupt initiat engage approach response expect new same
+     relative objects sequence trans avoid control touch; 
+ MISSING=.;
+ categorical = primary-touch; 
+    usevar = primary-touch;
+    classes = c(5); 
+ANALYSIS:
+estimator = mlr; 
+    type = mixture;
+    starts = 0;
+    !starts = 500 200;
+    STSEED = 21345; !!! USE SEED TO REPLICATE THESIS RESULTS !!!
+   
+MODEL:
+
+  %OVERALL%
+
+  
+OUTPUT:
+svalues;
+PLOT:
+type = plot3; 
+          series = primary-touch(*);
